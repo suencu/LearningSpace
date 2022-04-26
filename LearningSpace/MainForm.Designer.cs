@@ -52,9 +52,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(385, 364);
+            this.button1.Location = new System.Drawing.Point(352, 322);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 50);
+            this.button1.Size = new System.Drawing.Size(160, 62);
             this.button1.TabIndex = 0;
             this.button1.Text = "ENTRY";
             this.button1.UseVisualStyleBackColor = false;
@@ -65,9 +66,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(342, 43);
+            this.label1.Location = new System.Drawing.Point(310, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 50);
+            this.label1.Size = new System.Drawing.Size(251, 62);
             this.label1.TabIndex = 1;
             this.label1.Text = "Авторизация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,9 +77,10 @@
             // pictureLogin
             // 
             this.pictureLogin.BackColor = System.Drawing.Color.SlateBlue;
-            this.pictureLogin.Location = new System.Drawing.Point(245, 200);
+            this.pictureLogin.Location = new System.Drawing.Point(170, 159);
+            this.pictureLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pictureLogin.Name = "pictureLogin";
-            this.pictureLogin.Size = new System.Drawing.Size(47, 40);
+            this.pictureLogin.Size = new System.Drawing.Size(63, 49);
             this.pictureLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureLogin.TabIndex = 2;
             this.pictureLogin.TabStop = false;
@@ -85,9 +88,10 @@
             // picturePassowrd
             // 
             this.picturePassowrd.BackColor = System.Drawing.Color.SlateBlue;
-            this.picturePassowrd.Location = new System.Drawing.Point(245, 262);
+            this.picturePassowrd.Location = new System.Drawing.Point(170, 245);
+            this.picturePassowrd.Margin = new System.Windows.Forms.Padding(4);
             this.picturePassowrd.Name = "picturePassowrd";
-            this.picturePassowrd.Size = new System.Drawing.Size(47, 40);
+            this.picturePassowrd.Size = new System.Drawing.Size(63, 49);
             this.picturePassowrd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturePassowrd.TabIndex = 3;
             this.picturePassowrd.TabStop = false;
@@ -96,10 +100,11 @@
             // 
             this.loginBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.loginBox.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginBox.Location = new System.Drawing.Point(314, 200);
+            this.loginBox.Location = new System.Drawing.Point(254, 159);
+            this.loginBox.Margin = new System.Windows.Forms.Padding(4);
             this.loginBox.Multiline = true;
             this.loginBox.Name = "loginBox";
-            this.loginBox.Size = new System.Drawing.Size(318, 40);
+            this.loginBox.Size = new System.Drawing.Size(423, 48);
             this.loginBox.TabIndex = 4;
             this.loginBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -107,10 +112,11 @@
             // 
             this.passwordBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.passwordBox.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordBox.Location = new System.Drawing.Point(314, 262);
+            this.passwordBox.Location = new System.Drawing.Point(254, 245);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Multiline = true;
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(318, 40);
+            this.passwordBox.Size = new System.Drawing.Size(423, 48);
             this.passwordBox.TabIndex = 5;
             this.passwordBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -126,9 +132,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(854, 0);
+            this.button3.Location = new System.Drawing.Point(821, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(46, 32);
+            this.button3.Size = new System.Drawing.Size(61, 39);
             this.button3.TabIndex = 7;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
@@ -146,9 +153,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(811, 0);
+            this.button2.Location = new System.Drawing.Point(764, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 32);
+            this.button2.Size = new System.Drawing.Size(61, 39);
             this.button2.TabIndex = 8;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = false;
@@ -159,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(900, 500);
+            this.ClientSize = new System.Drawing.Size(882, 453);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.passwordBox);
@@ -170,6 +178,7 @@
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";

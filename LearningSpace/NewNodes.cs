@@ -11,23 +11,22 @@ using System.Windows.Forms;
 
 namespace LearningSpace
 {
-    public partial class MenuForm : Form
+    public partial class NewNodes : Form
     {
         Thread th;
-        public MenuForm()
+        public NewNodes()
         {
             InitializeComponent();
         }
 
-        private void buttonNodes_Click(object sender, EventArgs e)
+        private void buttonBackToNodes_Click(object sender, EventArgs e)
         {
-            th = new Thread(openNewForm);
+            th = new Thread(openBackNotes);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
             Close();
-
         }
-        private void openNewForm()
+        private void openBackNotes()
         {
             Application.Run(new Nodes());
         }

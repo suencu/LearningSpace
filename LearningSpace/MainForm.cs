@@ -34,6 +34,7 @@ namespace LearningSpace
         private void OpenNewForm()
         {
             Application.Run(new MenuForm());
+            button1.Location = new Point(0, 0);
         }
 
         private void CloseApp(object sender, EventArgs e)

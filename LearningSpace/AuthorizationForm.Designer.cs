@@ -37,6 +37,7 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +79,7 @@
             // pictureLogin
             // 
             this.pictureLogin.BackColor = System.Drawing.Color.SlateBlue;
+            this.pictureLogin.InitialImage = null;
             this.pictureLogin.Location = new System.Drawing.Point(170, 159);
             this.pictureLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pictureLogin.Name = "pictureLogin";
@@ -188,12 +190,23 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.GoToRegister);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(363, 426);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(146, 20);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "Запомнить меня ?";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(900, 500);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonMinimize);
             this.Controls.Add(this.buttonClose);
@@ -228,6 +241,7 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonMinimize;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

@@ -69,6 +69,7 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySQLCommand.cs" />
     <Compile Include="NewNodes.cs">
       <SubType>Form</SubType>
     </Compile>

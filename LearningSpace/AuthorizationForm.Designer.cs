@@ -101,12 +101,11 @@
             // loginBox
             // 
             this.loginBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.loginBox.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginBox.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginBox.Location = new System.Drawing.Point(254, 159);
             this.loginBox.Margin = new System.Windows.Forms.Padding(4);
-            this.loginBox.Multiline = true;
             this.loginBox.Name = "loginBox";
-            this.loginBox.Size = new System.Drawing.Size(423, 48);
+            this.loginBox.Size = new System.Drawing.Size(423, 46);
             this.loginBox.TabIndex = 4;
             this.loginBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.loginBox.Enter += new System.EventHandler(this.loginBox_Enter);
@@ -115,12 +114,11 @@
             // passwordBox
             // 
             this.passwordBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.passwordBox.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordBox.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordBox.Location = new System.Drawing.Point(254, 245);
             this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
-            this.passwordBox.Multiline = true;
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(423, 48);
+            this.passwordBox.Size = new System.Drawing.Size(423, 46);
             this.passwordBox.TabIndex = 5;
             this.passwordBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.passwordBox.Enter += new System.EventHandler(this.passwordBox_Enter);
@@ -210,7 +208,6 @@
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AuthorizationForm";
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).EndInit();
             this.ResumeLayout(false);

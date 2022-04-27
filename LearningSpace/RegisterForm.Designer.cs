@@ -38,6 +38,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureLogin = new System.Windows.Forms.PictureBox();
             this.loginBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).BeginInit();
@@ -88,12 +89,11 @@
             // passwordBox
             // 
             this.passwordBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.passwordBox.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordBox.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordBox.Location = new System.Drawing.Point(267, 192);
             this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
-            this.passwordBox.Multiline = true;
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(423, 48);
+            this.passwordBox.Size = new System.Drawing.Size(423, 46);
             this.passwordBox.TabIndex = 14;
             this.passwordBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.passwordBox.Enter += new System.EventHandler(this.passwordBox_Enter);
@@ -135,7 +135,7 @@
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegister.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonRegister.Location = new System.Drawing.Point(359, 341);
+            this.buttonRegister.Location = new System.Drawing.Point(530, 336);
             this.buttonRegister.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(160, 62);
@@ -147,12 +147,11 @@
             // checkPasswordBox
             // 
             this.checkPasswordBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.checkPasswordBox.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkPasswordBox.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkPasswordBox.Location = new System.Drawing.Point(267, 263);
             this.checkPasswordBox.Margin = new System.Windows.Forms.Padding(4);
-            this.checkPasswordBox.Multiline = true;
             this.checkPasswordBox.Name = "checkPasswordBox";
-            this.checkPasswordBox.Size = new System.Drawing.Size(423, 48);
+            this.checkPasswordBox.Size = new System.Drawing.Size(423, 46);
             this.checkPasswordBox.TabIndex = 18;
             this.checkPasswordBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.checkPasswordBox.Enter += new System.EventHandler(this.checkPasswordBox_Enter);
@@ -183,16 +182,36 @@
             // loginBox
             // 
             this.loginBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.loginBox.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginBox.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginBox.Location = new System.Drawing.Point(267, 122);
             this.loginBox.Margin = new System.Windows.Forms.Padding(4);
-            this.loginBox.Multiline = true;
             this.loginBox.Name = "loginBox";
-            this.loginBox.Size = new System.Drawing.Size(423, 48);
+            this.loginBox.Size = new System.Drawing.Size(423, 46);
             this.loginBox.TabIndex = 13;
             this.loginBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.loginBox.Enter += new System.EventHandler(this.loginBox_Enter);
             this.loginBox.Leave += new System.EventHandler(this.loginBox_Leave);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.BackColor = System.Drawing.Color.SlateGray;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(267, 336);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(226, 62);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "AUTHORIZATION";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.GoToAuthorization);
             // 
             // RegisterForm
             // 
@@ -200,6 +219,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(882, 453);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkPasswordBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonMinimize);
@@ -214,7 +234,6 @@
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
             ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).EndInit();
@@ -235,5 +254,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureLogin;
         private System.Windows.Forms.TextBox loginBox;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -16,7 +16,7 @@ namespace LearningSpace
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AuthorizationForm());
+            Application.Run(new MenuForm());
         }
     }
 }

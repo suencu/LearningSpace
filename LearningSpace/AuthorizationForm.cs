@@ -24,6 +24,7 @@ namespace LearningSpace
             InitializeComponent();
             passwordStub();
             InitialTextBox();
+            
         }
 
         //нажатие на кнопки 
@@ -61,9 +62,23 @@ namespace LearningSpace
             else
             {
                 MessageBox.Show("You're not in the database. ");
+                OpenAuthorizationForm();
             }
 
 
+        }
+        private void OpenAuthorizationForm()
+        {
+            Updateform();
+        }
+        private void Updateform()
+        {
+            loginBox.Text = "Login";
+            loginBox.ForeColor = Color.Red;
+
+            passwordBox.PasswordChar = '\0';
+            passwordBox.Text = "Password";
+            passwordBox.ForeColor = Color.Red;
         }
         private void CloseApp(object sender, EventArgs e)
         {
@@ -82,14 +97,7 @@ namespace LearningSpace
         }
 
         //работа с меню
-        private void MoveForm(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - movePoint.X;
-                this.Top += e.Y - movePoint.Y;
-            }
-        }
+        
         private void OpenNewForm()
         {
             Application.Run(new MenuForm());

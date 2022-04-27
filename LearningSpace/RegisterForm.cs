@@ -44,23 +44,10 @@ namespace LearningSpace
         }
         private void GoToMenu(object sender, EventArgs e)
         {
-            if (loginBox.Text == null || passwordBox.Text == null || checkPasswordBox.Text == null || loginBox.Text == "Login" || passwordBox.Text == "Password" || checkPasswordBox.Text == "Confirm password")
+            
+            if (checkEnteredDate())
             {
                 MessageBox.Show("Некоректрые данные");
-                OpenRegisterForm();
-                return;
-            }
-            else if (passwordBox.Text != checkPasswordBox.Text)
-            {
-                MessageBox.Show("Некоректрые данные");
-
-                OpenRegisterForm();
-                return;
-            }
-            else if (checkEnteredDate())
-            {
-                MessageBox.Show("Некоректрые данные");
-
                 OpenRegisterForm();
                 return;
             }
@@ -90,13 +77,26 @@ namespace LearningSpace
         }
         public bool checkEnteredDate()
         {
+            if (loginBox.Text == null || passwordBox.Text == null || checkPasswordBox.Text == null || loginBox.Text == "Login" || passwordBox.Text == "Password" || checkPasswordBox.Text == "Confirm password")
+            {
+
+                OpenRegisterForm();
+                return true;
+            }
+            else if (passwordBox.Text != checkPasswordBox.Text)
+            {
+
+                OpenRegisterForm();
+                return true;
+            }
+
             MySqlCommand command1 = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @login", dataBase.GetMySqlConnection());
             command1.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginBox.Text;
 
             adapter.SelectCommand = command1;
             adapter.Fill(dataTable);
 
-            if(dataTable.Rows.Count > 0)
+            if (dataTable.Rows.Count > 0)
             {
                 MessageBox.Show("This login already exists, enter another Login.");
                 return true;
@@ -106,18 +106,26 @@ namespace LearningSpace
                 return false;
             }
         }
+        private void GoToAuthorization(object sender, EventArgs e)
+        {
+            thread = new Thread(OpenAuthorizationForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            Close();
+        }
         private void OpenNewForm()
         {
             Application.Run(new MenuForm());
         }
+        private void OpenAuthorizationForm()
+        {
+            Application.Run(new AuthorizationForm());
+        }
         private void OpenRegisterForm()
         {
-            //Application.Run(new RegisterForm());
-            
-            Update1();
-            Update();
+            UpdateForm();
         }
-        private void Update1()
+        private void UpdateForm()
         {
             loginBox.Text = "Login";
             loginBox.ForeColor = Color.Red;
@@ -131,14 +139,7 @@ namespace LearningSpace
             checkPasswordBox.ForeColor = Color.Red;
         }
         //работа с формами 
-        private void MoveForm(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - movePoint.X;
-                this.Top += e.Y - movePoint.Y;
-            }
-        }
+        
         private void passwordStub()
         {
             passwordBox.Text = "Password";
@@ -214,5 +215,7 @@ namespace LearningSpace
                 checkPasswordBox.ForeColor = Color.Black;
             }
         }
+
+        
     }
 }

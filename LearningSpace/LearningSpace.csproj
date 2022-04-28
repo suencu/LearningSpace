@@ -191,5 +191,14 @@
   <ItemGroup>
     <None Include="Resources\unlock.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lock-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-unlock-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

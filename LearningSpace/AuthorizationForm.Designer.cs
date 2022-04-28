@@ -63,7 +63,7 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonLogin.Location = new System.Drawing.Point(108, 402);
+            this.buttonLogin.Location = new System.Drawing.Point(127, 389);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(390, 46);
@@ -129,7 +129,7 @@
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegister.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonRegister.Location = new System.Drawing.Point(106, 482);
+            this.buttonRegister.Location = new System.Drawing.Point(125, 453);
             this.buttonRegister.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(392, 46);

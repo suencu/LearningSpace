@@ -83,6 +83,16 @@ namespace LearningSpace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_lock_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-lock-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_login_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-login-64", resourceCulture);
@@ -106,6 +116,26 @@ namespace LearningSpace.Properties {
         internal static System.Drawing.Bitmap icons8_login_64__2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-login-64 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_unlock_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-unlock-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-user-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

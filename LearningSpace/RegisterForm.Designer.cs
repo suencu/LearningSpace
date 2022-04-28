@@ -31,16 +31,16 @@
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.passwordBox = new System.Windows.Forms.TextBox();
-            this.picturePassowrd = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.checkPasswordBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureLogin = new System.Windows.Forms.PictureBox();
             this.loginBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picturePassowrd = new System.Windows.Forms.PictureBox();
+            this.pictureLogin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,17 +99,6 @@
             this.passwordBox.Enter += new System.EventHandler(this.passwordBox_Enter);
             this.passwordBox.Leave += new System.EventHandler(this.passwordBox_Leave);
             // 
-            // picturePassowrd
-            // 
-            this.picturePassowrd.BackColor = System.Drawing.Color.SlateBlue;
-            this.picturePassowrd.Location = new System.Drawing.Point(183, 192);
-            this.picturePassowrd.Margin = new System.Windows.Forms.Padding(4);
-            this.picturePassowrd.Name = "picturePassowrd";
-            this.picturePassowrd.Size = new System.Drawing.Size(63, 49);
-            this.picturePassowrd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePassowrd.TabIndex = 12;
-            this.picturePassowrd.TabStop = false;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -157,28 +146,6 @@
             this.checkPasswordBox.Enter += new System.EventHandler(this.checkPasswordBox_Enter);
             this.checkPasswordBox.Leave += new System.EventHandler(this.checkPasswordBox_Leave);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.SlateBlue;
-            this.pictureBox1.Location = new System.Drawing.Point(183, 263);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureLogin
-            // 
-            this.pictureLogin.BackColor = System.Drawing.Color.SlateBlue;
-            this.pictureLogin.Location = new System.Drawing.Point(183, 122);
-            this.pictureLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureLogin.Name = "pictureLogin";
-            this.pictureLogin.Size = new System.Drawing.Size(63, 49);
-            this.pictureLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureLogin.TabIndex = 11;
-            this.pictureLogin.TabStop = false;
-            // 
             // loginBox
             // 
             this.loginBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -213,6 +180,45 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.GoToAuthorization);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::LearningSpace.Properties.Resources.icons8_unlock_48;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(183, 263);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picturePassowrd
+            // 
+            this.picturePassowrd.BackColor = System.Drawing.Color.Transparent;
+            this.picturePassowrd.BackgroundImage = global::LearningSpace.Properties.Resources.icons8_lock_48;
+            this.picturePassowrd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picturePassowrd.Location = new System.Drawing.Point(183, 192);
+            this.picturePassowrd.Margin = new System.Windows.Forms.Padding(4);
+            this.picturePassowrd.Name = "picturePassowrd";
+            this.picturePassowrd.Size = new System.Drawing.Size(63, 49);
+            this.picturePassowrd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePassowrd.TabIndex = 12;
+            this.picturePassowrd.TabStop = false;
+            // 
+            // pictureLogin
+            // 
+            this.pictureLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pictureLogin.BackgroundImage = global::LearningSpace.Properties.Resources.icons8_user_48;
+            this.pictureLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureLogin.Location = new System.Drawing.Point(183, 122);
+            this.pictureLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureLogin.Name = "pictureLogin";
+            this.pictureLogin.Size = new System.Drawing.Size(63, 49);
+            this.pictureLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureLogin.TabIndex = 11;
+            this.pictureLogin.TabStop = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,8 +240,8 @@
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
-            ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -84,7 +84,7 @@ namespace LearningSpace
         {
             pictureBoxClose.BackColor = PicterBoxChangeColor;
         }
-
+        #region Движение формой
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
@@ -104,5 +104,26 @@ namespace LearningSpace
             dragging = true;
             startPoint = new Point(e.X, e.Y);
         }
+
+        private void MenuForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point point = PointToScreen(e.Location);
+                Location = new Point(point.X - this.startPoint.X, point.Y - this.startPoint.Y);
+            }
+        }
+
+        private void MenuForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startPoint = new Point(e.X, e.Y);
+        }
+
+        private void MenuForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+        #endregion
     }
 }

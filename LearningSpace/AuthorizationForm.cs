@@ -16,15 +16,22 @@ namespace LearningSpace
     {
         //переменные для проекта 
         Thread thread;
-        Point movePoint;
-
+        private bool dragging = false;
+        private Point startPoint = new Point(0, 0);
+        string HexColorForFontText= "#352c3c";
+        Color TextBoxColor;
+        string HexColorForFontTextEror= "#ce2d30";
+        Color TextBoxColorEror;
         //==========================
         public AuthorizationForm()
         {
             InitializeComponent();
             passwordStub();
             InitialTextBox();
-            
+            //buttonRegister.BackColor = Color.Transparent;
+            TextBoxColor = ColorTranslator.FromHtml(HexColorForFontText);
+            TextBoxColorEror = ColorTranslator.FromHtml(HexColorForFontTextEror);
+
         }
 
         //нажатие на кнопки 
@@ -74,13 +81,14 @@ namespace LearningSpace
         private void Updateform()
         {
             loginBox.Text = "Login";
-            loginBox.ForeColor = Color.Red;
+            loginBox.ForeColor = TextBoxColorEror;
 
             passwordBox.PasswordChar = '\0';
             passwordBox.Text = "Password";
-            passwordBox.ForeColor = Color.Red;
+            passwordBox.ForeColor = TextBoxColorEror;
         }
-        private void CloseApp(object sender, EventArgs e)
+        //кнопки раширить закрыть свернуть
+        private void pictureBoxClose_DoubleClick(object sender, EventArgs e)
         {
             Close();
         }
@@ -88,6 +96,18 @@ namespace LearningSpace
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        private void MaximaziApp(object sender, EventArgs e)
+        {
+            if (WindowState.ToString() == "Normal")
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+        //==============================
         private void GoToRegister(object sender, EventArgs e)
         {
             thread = new Thread(OpenRegisterForm);
@@ -109,7 +129,7 @@ namespace LearningSpace
         private void passwordStub()
         {
             passwordBox.Text = "Password";
-            passwordBox.ForeColor = Color.Gray;
+            passwordBox.ForeColor = TextBoxColor;
 
             passwordBox.AutoSize = false;
             passwordBox.Size = new Size(this.passwordBox.Size.Width, 40);
@@ -120,7 +140,7 @@ namespace LearningSpace
         private void InitialTextBox()
         {
             loginBox.Text = "Login";
-            loginBox.ForeColor = Color.Gray;
+            loginBox.ForeColor = TextBoxColor;
             passwordBox.Text = "Password";
         }
         private void loginBox_Enter(object sender, EventArgs e)
@@ -136,7 +156,7 @@ namespace LearningSpace
             if (loginBox.Text == "")
             {
                 loginBox.Text = "Login";
-                loginBox.ForeColor = Color.Gray;
+                loginBox.ForeColor = TextBoxColor;
             }
         }
         private void passwordBox_Enter(object sender, EventArgs e)
@@ -154,8 +174,68 @@ namespace LearningSpace
             {
                 passwordBox.PasswordChar = '\0';
                 passwordBox.Text = "Password";
-                passwordBox.ForeColor = Color.Gray;
+                passwordBox.ForeColor = TextBoxColor;
             }
         }
+
+        #region движение меню 
+        private void MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point point = PointToScreen(e.Location);
+                Location = new Point(point.X - this.startPoint.X, point.Y - this.startPoint.Y);
+            }
+        }
+
+        private void MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startPoint = new Point(e.X, e.Y);
+        }
+
+        private void MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void leftPanelMouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startPoint = new Point(e.X, e.Y);
+        }
+
+        private void leftPanelMouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point point = PointToScreen(e.Location);
+                Location = new Point(point.X - this.startPoint.X, point.Y - this.startPoint.Y);
+            }
+        }
+
+        private void leftPanelMouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void AuthorizationForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startPoint = new Point(e.X, e.Y);
+        }
+
+        private void AuthorizationForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point point = PointToScreen(e.Location);
+                Location = new Point(point.X - this.startPoint.X, point.Y - this.startPoint.Y);
+            }
+        }
+
+        #endregion
+
+        
     }
 }

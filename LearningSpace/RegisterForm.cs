@@ -22,7 +22,13 @@ namespace LearningSpace
         MySqlCommand command;
         MySqlDataAdapter adapter;
         DataTable dataTable;
-        
+        private bool dragging = false;
+        private Point startPoint = new Point(0, 0);
+        string HexColorForFontText = "#352c3c";
+        Color TextBoxColor;
+        string HexColorForFontTextEror = "#ce2d30";
+        Color TextBoxColorEror;
+
         //=========================
         public RegisterForm()
         {
@@ -32,6 +38,10 @@ namespace LearningSpace
             dataBase = new DataBase();
             adapter = new MySqlDataAdapter();
             dataTable = new DataTable();
+            TextBoxColor = ColorTranslator.FromHtml(HexColorForFontText);
+            TextBoxColorEror = ColorTranslator.FromHtml(HexColorForFontTextEror);
+
+            
         }
         //нажатие на кнопки 
         private void CloseMenu(object sender, EventArgs e)
@@ -128,28 +138,28 @@ namespace LearningSpace
         private void UpdateForm()
         {
             loginBox.Text = "Login";
-            loginBox.ForeColor = Color.Red;
+            loginBox.ForeColor = TextBoxColorEror;
 
             passwordBox.PasswordChar = '\0';
             passwordBox.Text = "Password";
-            passwordBox.ForeColor = Color.Red;
+            passwordBox.ForeColor = TextBoxColorEror;
 
             checkPasswordBox.PasswordChar = '\0';
             checkPasswordBox.Text = "Confirm password";
-            checkPasswordBox.ForeColor = Color.Red;
+            checkPasswordBox.ForeColor = TextBoxColorEror;
         }
         //работа с формами 
         
         private void passwordStub()
         {
             passwordBox.Text = "Password";
-            passwordBox.ForeColor = Color.Gray;
+            passwordBox.ForeColor = TextBoxColor;
 
             passwordBox.AutoSize = false;
             passwordBox.Size = new Size(this.passwordBox.Size.Width, 40);
 
             checkPasswordBox.Text = "Confirm password";
-            checkPasswordBox.ForeColor = Color.Gray;
+            checkPasswordBox.ForeColor = TextBoxColor;
 
             checkPasswordBox.AutoSize = false;
             checkPasswordBox.Size = new Size(this.passwordBox.Size.Width, 40);
@@ -159,16 +169,21 @@ namespace LearningSpace
         private void InitialTextBox()
         {
             loginBox.Text = "Login";
-            loginBox.ForeColor = Color.Gray;
+            loginBox.ForeColor = TextBoxColor;
+
             passwordBox.Text = "Password";
+            passwordBox.ForeColor = TextBoxColor;
+
             checkPasswordBox.Text = "Confirm password";
+            checkPasswordBox.ForeColor = TextBoxColor;
+
         }
         private void loginBox_Enter(object sender, EventArgs e)
         {
-            if(loginBox.Text == "Login")
+            if (loginBox.Text == "Login")
             {
                 loginBox.Text = "";
-                loginBox.ForeColor = Color.Black;
+                loginBox.ForeColor = TextBoxColor;
             }
         }
         private void loginBox_Leave(object sender, EventArgs e)
@@ -176,7 +191,7 @@ namespace LearningSpace
             if (loginBox.Text == "")
             {
                 loginBox.Text = "Login";
-                loginBox.ForeColor = Color.Gray;
+                loginBox.ForeColor = TextBoxColor;
             }
         }
         private void passwordBox_Enter(object sender, EventArgs e)
@@ -185,7 +200,7 @@ namespace LearningSpace
             {
                 passwordBox.PasswordChar = '•';
                 passwordBox.Text = "";
-                passwordBox.ForeColor = Color.Black;
+                passwordBox.ForeColor = TextBoxColor;
             }
         }
         private void passwordBox_Leave(object sender, EventArgs e)
@@ -194,28 +209,99 @@ namespace LearningSpace
             {
                 passwordBox.PasswordChar = '\0';
                 passwordBox.Text = "Password";
-                passwordBox.ForeColor = Color.Gray;
+                passwordBox.ForeColor = TextBoxColor;
             }
         }
         private void checkPasswordBox_Leave(object sender, EventArgs e)
         {
             if (checkPasswordBox.Text == "")
             {
-                checkPasswordBox.PasswordChar = '\0'; 
+                checkPasswordBox.PasswordChar = '\0';
                 checkPasswordBox.Text = "Confirm password";
-                checkPasswordBox.ForeColor = Color.Gray;
+                checkPasswordBox.ForeColor = TextBoxColor;
             }
         }
         private void checkPasswordBox_Enter(object sender, EventArgs e)
         {
             if (checkPasswordBox.Text == "Confirm password")
-            {
+            { 
                 checkPasswordBox.PasswordChar = '•';
                 checkPasswordBox.Text = "";
-                checkPasswordBox.ForeColor = Color.Black;
+                checkPasswordBox.ForeColor = TextBoxColor;
             }
         }
+        //движение формы
+        private void RegisterForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+        private void RegisterForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point point = PointToScreen(e.Location);
+                Location = new Point(point.X - this.startPoint.X, point.Y - this.startPoint.Y);
+            }
+        }
+        private void RegisterForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startPoint = new Point(e.X, e.Y);
+        }
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point point = PointToScreen(e.Location);
+                Location = new Point(point.X - this.startPoint.X, point.Y - this.startPoint.Y);
+            }
+        }
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startPoint = new Point(e.X, e.Y);
+        }
 
-        
+        private void buttonForIgor_Click(object sender, EventArgs e)
+        {
+            thread = new Thread(OpenNewForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            Close();
+        }
+
+        private void buttonShow_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkBoxForPassword_Click(object sender, EventArgs e)
+        {
+            if (checkBoxForPassword.Checked)
+            {
+                passwordBox.PasswordChar = '\0';
+                checkPasswordBox.PasswordChar = '\0';
+            }
+            else
+            {
+                if(passwordBox.Text == "Password")
+                {
+                    passwordBox.PasswordChar = '\0';
+                }
+                else if(checkPasswordBox.Text == "Confirm passwor")
+                {
+                    checkPasswordBox.PasswordChar = '\0';
+                }
+                else
+                { 
+                    passwordBox.PasswordChar = '•';
+                    checkPasswordBox.PasswordChar = '•';
+                }
+            }
+        }
     }
 }

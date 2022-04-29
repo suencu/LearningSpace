@@ -28,7 +28,7 @@ namespace LearningSpace
             InitializeComponent();
             passwordStub();
             InitialTextBox();
-            //buttonRegister.BackColor = Color.Transparent;
+            
             TextBoxColor = ColorTranslator.FromHtml(HexColorForFontText);
             TextBoxColorEror = ColorTranslator.FromHtml(HexColorForFontTextEror);
 
@@ -179,25 +179,7 @@ namespace LearningSpace
         }
 
         #region движение меню 
-        private void MouseMove(object sender, MouseEventArgs e)
-        {
-            if (dragging)
-            {
-                Point point = PointToScreen(e.Location);
-                Location = new Point(point.X - this.startPoint.X, point.Y - this.startPoint.Y);
-            }
-        }
-
-        private void MouseDown(object sender, MouseEventArgs e)
-        {
-            dragging = true;
-            startPoint = new Point(e.X, e.Y);
-        }
-
-        private void MouseUp(object sender, MouseEventArgs e)
-        {
-            dragging = false;
-        }
+        
 
         private void leftPanelMouseDown(object sender, MouseEventArgs e)
         {
@@ -234,8 +216,13 @@ namespace LearningSpace
             }
         }
 
+        private void AuthorizationForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
         #endregion
 
-        
+
     }
 }

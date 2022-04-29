@@ -41,6 +41,13 @@ namespace LearningSpace
             Close();
         }
 
+        private void buttonCalender_Click(object sender, EventArgs e)
+        {
+            th = new Thread(OpenNewNodes);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+            Close();
+        }
         #region открыть закрыть расширить FormMenu
 
         private void pictureBoxMinimize_Click(object sender, EventArgs e)
@@ -73,6 +80,11 @@ namespace LearningSpace
         private void OpenTestMenu()
         {
             Application.Run(new TestMenuForm());
+        }
+
+        private void OpenNewNodes()
+        {
+            Application.Run(new NewNodes());
         }
 
         private void pictureBoxClose_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -125,5 +137,7 @@ namespace LearningSpace
             dragging = false;
         }
         #endregion
+
+       
     }
 }

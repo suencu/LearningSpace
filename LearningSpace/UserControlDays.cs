@@ -12,6 +12,7 @@ namespace LearningSpace
 {
     public partial class UserControlDays : UserControl
     {
+        public static string static_day;
         public UserControlDays()
         {
             InitializeComponent();
@@ -25,6 +26,13 @@ namespace LearningSpace
         public void days(int numDay)
         {
             labelDays.Text = numDay + "";
+        }
+
+        private void UserControlDays_Click(object sender, EventArgs e)
+        {
+            static_day = labelDays.Text;
+            EventForm eventForm = new EventForm();
+            eventForm.Show();
         }
     }
 }

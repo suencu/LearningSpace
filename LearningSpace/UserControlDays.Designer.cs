@@ -45,11 +45,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
             this.Controls.Add(this.labelDays);
+            this.Font = new System.Drawing.Font("Consolas", 8.25F);
+            this.ForeColor = System.Drawing.SystemColors.Info;
             this.Name = "UserControlDays";
             this.Size = new System.Drawing.Size(150, 82);
             this.Load += new System.EventHandler(this.UserControlDays_Load);
+            this.Click += new System.EventHandler(this.UserControlDays_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

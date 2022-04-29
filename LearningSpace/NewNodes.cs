@@ -15,6 +15,7 @@ namespace LearningSpace
     public partial class NewNodes : Form
     {
         int month, year;
+        public static string static_month, static_year;
         Thread th;
 
 
@@ -35,7 +36,7 @@ namespace LearningSpace
         }
         private void openBackNotes()
         {
-            Application.Run(new Nodes());
+            Application.Run(new MenuForm());
         }
 
         private void NewNodes_Load(object sender, EventArgs e)
@@ -54,7 +55,11 @@ namespace LearningSpace
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
 
             LBDATE.Text = monthName + " " + year;
-                
+
+
+            static_month = (Convert.ToString(month));
+            static_year = (Convert.ToString(year));
+
 
             DateTime statrtOfTheMonth = new DateTime(year, month, 1);
 
@@ -87,7 +92,8 @@ namespace LearningSpace
                 month = 12;
                 year--;
             }
-
+            static_month = (Convert.ToString(month));
+            static_year = (Convert.ToString(year));
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
 
             LBDATE.Text = monthName + " " + year;
@@ -112,6 +118,16 @@ namespace LearningSpace
             }
         }
 
+        private void pictureBoxClose_DoubleClick(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void MinimizeAdd(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void buttonNext_Click(object sender, EventArgs e)
         {
             daycontainer.Controls.Clear();
@@ -122,7 +138,9 @@ namespace LearningSpace
                 month = 1;
                 year++;
             }
-          
+            static_month = (Convert.ToString(month));
+            static_year = (Convert.ToString(year));
+
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
 
             LBDATE.Text = monthName + " " + year;

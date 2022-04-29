@@ -109,17 +109,15 @@
     <Compile Include="Control\UserControlBlank.Designer.cs">
       <DependentUpon>UserControlBlank.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlDays.cs">
+    <Compile Include="Control\UserControlDays.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlDays.Designer.cs">
+    <Compile Include="Control\UserControlDays.Designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
-
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
     </EmbeddedResource>
-
     <Compile Include="WOW\Animation\Animation.cs" />
     <Compile Include="WOW\Animation\Animator.cs" />
     <Compile Include="WOW\Components\EgoldsFormStyle.cs">
@@ -158,7 +156,6 @@
     </Compile>
     <Compile Include="WOW\Drawer.cs" />
     <Compile Include="WOW\FlatColors.cs" />
-
     <EmbeddedResource Include="Graph.resx">
       <DependentUpon>Graph.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,7 +190,7 @@
     <EmbeddedResource Include="Control\UserControlBlank.resx">
       <DependentUpon>UserControlBlank.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlDays.resx">
+    <EmbeddedResource Include="Control\UserControlDays.resx">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

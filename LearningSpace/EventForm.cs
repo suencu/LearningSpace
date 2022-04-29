@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;    
+using MySql.Data.MySqlClient;
 
 
 namespace LearningSpace
 {
     public partial class EventForm : Form
     {
-        String connString = "server=localhost;user id=root;database=db_calendar;sslmode=none";
         public EventForm()
         {
             InitializeComponent();
@@ -22,22 +21,27 @@ namespace LearningSpace
 
         private void EventForm_Load(object sender, EventArgs e)
         {
-            textDate.Text =NewNodes.static_month+"/"+ UserControlDays.static_day + "/" + NewNodes.static_year;
+            textDate.Text = NewNodes.static_month + "/" + UserControlDays.static_day + "/" + NewNodes.static_year;
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection(connString);
-            connection.Open();
-            String sql = "INSERT INTO tbl_calendar(date,event)values(?,?)";
-            MySqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = sql;
-            cmd.Parameters.AddWithValue("date", textDate.Text);
-            cmd.Parameters.AddWithValue("event", textEvent.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Saved");
-            cmd.Dispose();
-            connection.Close();
+            DataBase dataBase = new DataBase();
+            MySqlCommand command = new MySqlCommand("INSERT INTO `tbl` (`event` , `date` ) VALUES (@event , @date )", dataBase.GetMySqlConnection());
+            command.Parameters.Add("@date", MySqlDbType.VarChar).Value = textDate.Text;
+            command.Parameters.Add("@event", MySqlDbType.VarChar).Value = textEvent.Text;
+
+
+            dataBase.OpenConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Saved");
+                Close();
+            }
+            
+
+            dataBase.CloseConnection();
         }
     }
 }

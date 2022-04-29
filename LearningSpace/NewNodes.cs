@@ -18,10 +18,6 @@ namespace LearningSpace
         public static string static_month, static_year;
         Thread th;
 
-
-
-
-
         public NewNodes()
         {
             InitializeComponent();

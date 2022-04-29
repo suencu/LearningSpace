@@ -16,7 +16,7 @@ namespace LearningSpace
     {
         //переменные для проекта
 
-        Point movePoint;
+        
         Thread thread;
         DataBase dataBase;
         MySqlCommand command;

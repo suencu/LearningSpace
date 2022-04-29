@@ -148,8 +148,15 @@ namespace LearningSpace
             checkPasswordBox.Text = "Confirm password";
             checkPasswordBox.ForeColor = TextBoxColorEror;
         }
+        private void buttonForIgor_Click(object sender, EventArgs e)
+        {
+            thread = new Thread(OpenNewForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            Close();
+        }
         //работа с формами 
-        
+
         private void passwordStub()
         {
             passwordBox.Text = "Password";
@@ -266,19 +273,7 @@ namespace LearningSpace
             startPoint = new Point(e.X, e.Y);
         }
 
-        private void buttonForIgor_Click(object sender, EventArgs e)
-        {
-            thread = new Thread(OpenNewForm);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            Close();
-        }
-
-        private void buttonShow_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        //работа с CheckBox
         private void checkBoxForPassword_Click(object sender, EventArgs e)
         {
             if (checkBoxForPassword.Checked)

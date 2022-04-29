@@ -40,8 +40,8 @@
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.pictureBoxMinimize = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonForIgor = new System.Windows.Forms.Button();
             this.checkBoxForPassword = new System.Windows.Forms.CheckBox();
+            this.buttonForIgor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).BeginInit();
@@ -240,6 +240,20 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // checkBoxForPassword
+            // 
+            this.checkBoxForPassword.AutoSize = true;
+            this.checkBoxForPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(229)))), ((int)(((byte)(191)))));
+            this.checkBoxForPassword.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold);
+            this.checkBoxForPassword.Location = new System.Drawing.Point(361, 552);
+            this.checkBoxForPassword.Name = "checkBoxForPassword";
+            this.checkBoxForPassword.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.checkBoxForPassword.Size = new System.Drawing.Size(280, 47);
+            this.checkBoxForPassword.TabIndex = 29;
+            this.checkBoxForPassword.Text = "SHOW PASSWORD?";
+            this.checkBoxForPassword.UseVisualStyleBackColor = false;
+            this.checkBoxForPassword.Click += new System.EventHandler(this.checkBoxForPassword_Click);
+            // 
             // buttonForIgor
             // 
             this.buttonForIgor.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -260,20 +274,6 @@
             this.buttonForIgor.Text = "FOR IGOR";
             this.buttonForIgor.UseVisualStyleBackColor = false;
             this.buttonForIgor.Click += new System.EventHandler(this.buttonForIgor_Click);
-            // 
-            // checkBoxForPassword
-            // 
-            this.checkBoxForPassword.AutoSize = true;
-            this.checkBoxForPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(229)))), ((int)(((byte)(191)))));
-            this.checkBoxForPassword.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold);
-            this.checkBoxForPassword.Location = new System.Drawing.Point(361, 552);
-            this.checkBoxForPassword.Name = "checkBoxForPassword";
-            this.checkBoxForPassword.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.checkBoxForPassword.Size = new System.Drawing.Size(280, 47);
-            this.checkBoxForPassword.TabIndex = 29;
-            this.checkBoxForPassword.Text = "SHOW PASSWORD?";
-            this.checkBoxForPassword.UseVisualStyleBackColor = false;
-            this.checkBoxForPassword.Click += new System.EventHandler(this.checkBoxForPassword_Click);
             // 
             // RegisterForm
             // 

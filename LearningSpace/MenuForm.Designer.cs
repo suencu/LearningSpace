@@ -109,7 +109,10 @@
             this.buttonCalender.TabIndex = 3;
             this.buttonCalender.Text = "Calender";
             this.buttonCalender.UseVisualStyleBackColor = false;
+
             this.buttonCalender.Click += new System.EventHandler(this.buttonCalender_Click);
+
+
             // 
             // button3
             // 
@@ -163,10 +166,17 @@
             // 
             this.pictureBoxClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
             this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
+
             this.pictureBoxClose.Location = new System.Drawing.Point(870, 0);
             this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxClose.Name = "pictureBoxClose";
             this.pictureBoxClose.Size = new System.Drawing.Size(30, 24);
+
+            this.pictureBoxClose.Location = new System.Drawing.Point(1160, 0);
+            this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxClose.Name = "pictureBoxClose";
+            this.pictureBoxClose.Size = new System.Drawing.Size(40, 30);
+
             this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxClose.TabIndex = 10;
             this.pictureBoxClose.TabStop = false;
@@ -176,10 +186,17 @@
             // pictureBoxMinimize
             // 
             this.pictureBoxMinimize.Image = global::LearningSpace.Properties.Resources.minus;
+
             this.pictureBoxMinimize.Location = new System.Drawing.Point(840, 0);
             this.pictureBoxMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxMinimize.Name = "pictureBoxMinimize";
             this.pictureBoxMinimize.Size = new System.Drawing.Size(30, 24);
+
+            this.pictureBoxMinimize.Location = new System.Drawing.Point(1120, 0);
+            this.pictureBoxMinimize.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxMinimize.Name = "pictureBoxMinimize";
+            this.pictureBoxMinimize.Size = new System.Drawing.Size(40, 30);
+
             this.pictureBoxMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMinimize.TabIndex = 9;
             this.pictureBoxMinimize.TabStop = false;
@@ -188,10 +205,17 @@
             // pictureBoxMaximaze
             // 
             this.pictureBoxMaximaze.Image = global::LearningSpace.Properties.Resources.maximize;
+
             this.pictureBoxMaximaze.Location = new System.Drawing.Point(810, 0);
             this.pictureBoxMaximaze.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxMaximaze.Name = "pictureBoxMaximaze";
             this.pictureBoxMaximaze.Size = new System.Drawing.Size(30, 24);
+
+            this.pictureBoxMaximaze.Location = new System.Drawing.Point(1080, 0);
+            this.pictureBoxMaximaze.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxMaximaze.Name = "pictureBoxMaximaze";
+            this.pictureBoxMaximaze.Size = new System.Drawing.Size(40, 30);
+
             this.pictureBoxMaximaze.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMaximaze.TabIndex = 8;
             this.pictureBoxMaximaze.TabStop = false;

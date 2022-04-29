@@ -221,8 +221,7 @@ namespace LearningSpace
             dragging = false;
         }
 
+
         #endregion
-
-
     }
 }

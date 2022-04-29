@@ -118,44 +118,44 @@
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="WOW\Animation\Animation.cs" />
-    <Compile Include="WOW\Animation\Animator.cs" />
-    <Compile Include="WOW\Components\EgoldsFormStyle.cs">
+    <Compile Include="STYLES\Animation\Animation.cs" />
+    <Compile Include="STYLES\Animation\Animator.cs" />
+    <Compile Include="STYLES\Components\EgoldsFormStyle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WOW\Components\EgoldsFormStyle.Designer.cs">
+    <Compile Include="STYLES\Components\EgoldsFormStyle.Designer.cs">
       <DependentUpon>EgoldsFormStyle.cs</DependentUpon>
     </Compile>
-    <Compile Include="WOW\Components\EgoldsStyle.cs" />
-    <Compile Include="WOW\Components\RoundingButtonsComponent.cs">
+    <Compile Include="STYLES\Components\EgoldsStyle.cs" />
+    <Compile Include="STYLES\Components\RoundingButtonsComponent.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WOW\Components\RoundingButtonsComponent.Designer.cs">
+    <Compile Include="STYLES\Components\RoundingButtonsComponent.Designer.cs">
       <DependentUpon>RoundingButtonsComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="WOW\Controls\EgoldsCard.cs">
+    <Compile Include="STYLES\Controls\EgoldsCard.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WOW\Controls\EgoldsGoogleTextBox.cs">
+    <Compile Include="STYLES\Controls\EgoldsGoogleTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WOW\Controls\EgoldsProgressBar.cs">
+    <Compile Include="STYLES\Controls\EgoldsProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WOW\Controls\EgoldsRadioButton.cs">
+    <Compile Include="STYLES\Controls\EgoldsRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WOW\Controls\EgoldsToggleSwitch.cs">
+    <Compile Include="STYLES\Controls\EgoldsToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WOW\Controls\ShadowedForm.cs">
+    <Compile Include="STYLES\Controls\ShadowedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WOW\Controls\yt_Button.cs">
+    <Compile Include="STYLES\Controls\yt_Button.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WOW\Drawer.cs" />
-    <Compile Include="WOW\FlatColors.cs" />
+    <Compile Include="STYLES\Drawer.cs" />
+    <Compile Include="STYLES\FlatColors.cs" />
     <EmbeddedResource Include="Graph.resx">
       <DependentUpon>Graph.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,14 +173,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +242,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-unlock-48.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Login3.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,15 @@
 ﻿using System;
-using System.Windows.Forms;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using yt_DesignUI;
+using yt_DesignUI.Components;
+using yt_DesignUI.Controls;
 
 namespace LearningSpace
 {
@@ -10,6 +19,8 @@ namespace LearningSpace
         {
             InitializeComponent();
             customizeDesing();
+
+            
         }
 
         private void customizeDesing()

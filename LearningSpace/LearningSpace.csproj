@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -108,6 +109,44 @@
     <Compile Include="UserControlDays.Designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
+    <Compile Include="WOW\Animation\Animation.cs" />
+    <Compile Include="WOW\Animation\Animator.cs" />
+    <Compile Include="WOW\Components\EgoldsFormStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOW\Components\EgoldsFormStyle.Designer.cs">
+      <DependentUpon>EgoldsFormStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WOW\Components\EgoldsStyle.cs" />
+    <Compile Include="WOW\Components\RoundingButtonsComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOW\Components\RoundingButtonsComponent.Designer.cs">
+      <DependentUpon>RoundingButtonsComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WOW\Controls\EgoldsCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOW\Controls\EgoldsGoogleTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOW\Controls\EgoldsProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOW\Controls\EgoldsRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOW\Controls\EgoldsToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOW\Controls\ShadowedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WOW\Controls\yt_Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOW\Drawer.cs" />
+    <Compile Include="WOW\FlatColors.cs" />
     <EmbeddedResource Include="Graph.resx">
       <DependentUpon>Graph.cs</DependentUpon>
     </EmbeddedResource>

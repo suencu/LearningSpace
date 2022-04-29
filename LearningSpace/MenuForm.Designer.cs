@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.buttonMaximaze = new System.Windows.Forms.Button();
             this.buttonTestMenu = new System.Windows.Forms.Button();
-            this.pictureBoxMinimize = new System.Windows.Forms.PictureBox();
             this.buttonCalender = new System.Windows.Forms.Button();
-            this.pictureBoxMaximaze = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBoxClose = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMinimize = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMaximaze = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).BeginInit();
@@ -63,20 +63,6 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // pictureBoxClose
-            // 
-            this.pictureBoxClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
-            this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
-            this.pictureBoxClose.Location = new System.Drawing.Point(1160, 0);
-            this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBoxClose.Name = "pictureBoxClose";
-            this.pictureBoxClose.Size = new System.Drawing.Size(40, 30);
-            this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxClose.TabIndex = 10;
-            this.pictureBoxClose.TabStop = false;
-            this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
-            this.pictureBoxClose.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxClose_MouseDoubleClick);
             // 
             // buttonMaximaze
             // 
@@ -107,18 +93,6 @@
             this.buttonTestMenu.UseVisualStyleBackColor = false;
             this.buttonTestMenu.Click += new System.EventHandler(this.buttonTestMenu_Click);
             // 
-            // pictureBoxMinimize
-            // 
-            this.pictureBoxMinimize.Image = global::LearningSpace.Properties.Resources.minus;
-            this.pictureBoxMinimize.Location = new System.Drawing.Point(1120, 0);
-            this.pictureBoxMinimize.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBoxMinimize.Name = "pictureBoxMinimize";
-            this.pictureBoxMinimize.Size = new System.Drawing.Size(40, 30);
-            this.pictureBoxMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxMinimize.TabIndex = 9;
-            this.pictureBoxMinimize.TabStop = false;
-            this.pictureBoxMinimize.Click += new System.EventHandler(this.pictureBoxMinimize_Click);
-            // 
             // buttonCalender
             // 
             this.buttonCalender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -135,18 +109,6 @@
             this.buttonCalender.TabIndex = 3;
             this.buttonCalender.Text = "Calender";
             this.buttonCalender.UseVisualStyleBackColor = false;
-            // 
-            // pictureBoxMaximaze
-            // 
-            this.pictureBoxMaximaze.Image = global::LearningSpace.Properties.Resources.maximize;
-            this.pictureBoxMaximaze.Location = new System.Drawing.Point(1080, 0);
-            this.pictureBoxMaximaze.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBoxMaximaze.Name = "pictureBoxMaximaze";
-            this.pictureBoxMaximaze.Size = new System.Drawing.Size(40, 30);
-            this.pictureBoxMaximaze.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxMaximaze.TabIndex = 8;
-            this.pictureBoxMaximaze.TabStop = false;
-            this.pictureBoxMaximaze.Click += new System.EventHandler(this.pictureBoxMaximaze_Click);
             // 
             // button3
             // 
@@ -198,6 +160,44 @@
             this.button1.Text = "Nodes";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.buttonNodes_Click);
+            // 
+            // pictureBoxClose
+            // 
+            this.pictureBoxClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
+            this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
+            this.pictureBoxClose.Location = new System.Drawing.Point(1160, 0);
+            this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxClose.Name = "pictureBoxClose";
+            this.pictureBoxClose.Size = new System.Drawing.Size(40, 30);
+            this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxClose.TabIndex = 10;
+            this.pictureBoxClose.TabStop = false;
+            this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
+            this.pictureBoxClose.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxClose_MouseDoubleClick);
+            // 
+            // pictureBoxMinimize
+            // 
+            this.pictureBoxMinimize.Image = global::LearningSpace.Properties.Resources.minus;
+            this.pictureBoxMinimize.Location = new System.Drawing.Point(1120, 0);
+            this.pictureBoxMinimize.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxMinimize.Name = "pictureBoxMinimize";
+            this.pictureBoxMinimize.Size = new System.Drawing.Size(40, 30);
+            this.pictureBoxMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMinimize.TabIndex = 9;
+            this.pictureBoxMinimize.TabStop = false;
+            this.pictureBoxMinimize.Click += new System.EventHandler(this.pictureBoxMinimize_Click);
+            // 
+            // pictureBoxMaximaze
+            // 
+            this.pictureBoxMaximaze.Image = global::LearningSpace.Properties.Resources.maximize;
+            this.pictureBoxMaximaze.Location = new System.Drawing.Point(1080, 0);
+            this.pictureBoxMaximaze.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxMaximaze.Name = "pictureBoxMaximaze";
+            this.pictureBoxMaximaze.Size = new System.Drawing.Size(40, 30);
+            this.pictureBoxMaximaze.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMaximaze.TabIndex = 8;
+            this.pictureBoxMaximaze.TabStop = false;
+            this.pictureBoxMaximaze.Click += new System.EventHandler(this.pictureBoxMaximaze_Click);
             // 
             // MenuForm
             // 

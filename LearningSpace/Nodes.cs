@@ -46,7 +46,7 @@ namespace LearningSpace
         }
         private void openNewNotes()
         {
-            Application.Run(new NewNodes());
+            Application.Run(new Calendar());
         }
     }
 }

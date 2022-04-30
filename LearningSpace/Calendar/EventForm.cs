@@ -21,7 +21,7 @@ namespace LearningSpace
 
         private void EventForm_Load(object sender, EventArgs e)
         {
-            textDate.Text = NewNodes.static_month + "/" + UserControlDays.static_day + "/" + NewNodes.static_year;
+            textDate.Text = Calendar.static_month + "/" + UserControlDays.static_day + "/" + Calendar.static_year;
         }
 
         private void buttonSave_Click(object sender, EventArgs e)

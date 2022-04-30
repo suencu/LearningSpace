@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace LearningSpace
 {
-    public partial class NewNodes : Form
+    public partial class Calendar : Form
     {
         int month, year;
         public static string static_month, static_year;
         Thread th;
 
-        public NewNodes()
+        public Calendar()
         {
             InitializeComponent();
         }

@@ -13,18 +13,27 @@ namespace LearningSpace
 {
     public partial class MenuForm : Form
     {
+        #region -- Переменные --
+        //для перехода между Формами
         Thread th;
+        //для движение Формой
         private bool dragging = false;
         private Point startPoint = new Point(0,0);
+        //Цвет
         string HexColorForPicterBox = "#3e3c55";
         Color PicterBoxChangeColor;
+        #endregion
+
         public MenuForm()
         {
             InitializeComponent();
 
+            //установка цвета
             PicterBoxChangeColor = ColorTranslator.FromHtml(HexColorForPicterBox);
         }
 
+        #region -- Нажатие на обйекты --
+        //Button
         private void buttonNodes_Click(object sender, EventArgs e)
         {
             th = new Thread(OpenNodesForm);
@@ -40,7 +49,6 @@ namespace LearningSpace
             th.Start();
             Close();
         }
-
         private void buttonCalender_Click(object sender, EventArgs e)
         {
             th = new Thread(OpenNewNodes);
@@ -48,31 +56,20 @@ namespace LearningSpace
             th.Start();
             Close();
         }
-        #region открыть закрыть расширить FormMenu
 
+        //picterBox
         private void pictureBoxMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void pictureBoxMaximaze_Click(object sender, EventArgs e)
+        private void pictureBoxClose_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if(WindowState.ToString() == "Normal")
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
+            Close();
         }
+
         #endregion
 
-
-
-
-
-        /// что надо открыть 
+        #region -- Загрузка форм --
         private void OpenNodesForm()
         {
             Application.Run(new Nodes());
@@ -84,24 +81,16 @@ namespace LearningSpace
 
         private void OpenNewNodes()
         {
-            Application.Run(new NewNodes());
+            Application.Run(new Calendar());
         }
+        #endregion  
 
-        private void pictureBoxClose_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            Close();
-        }
-
-        private void pictureBoxClose_Click(object sender, EventArgs e)
-        {
-            pictureBoxClose.BackColor = PicterBoxChangeColor;
-        }
-        #region Движение формой
+        #region -- Движение формой --
+        //panel
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
         }
-
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
@@ -110,13 +99,12 @@ namespace LearningSpace
                 Location = new Point(point.X - this.startPoint.X, point.Y - this.startPoint.Y);
             }
         }
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
             startPoint = new Point(e.X, e.Y);
         }
-
+        //Form
         private void MenuForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
@@ -138,6 +126,5 @@ namespace LearningSpace
         }
         #endregion
 
-       
     }
 }

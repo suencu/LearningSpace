@@ -52,10 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DataBase.cs" />
-    <Compile Include="EventForm.cs">
+    <Compile Include="Calendar\EventForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventForm.Designer.cs">
+    <Compile Include="Calendar\EventForm.Designer.cs">
       <DependentUpon>EventForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Graph.cs">
@@ -76,12 +76,11 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\MySQLCommand.cs" />
-    <Compile Include="NewNodes.cs">
+    <Compile Include="Calendar\Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewNodes.Designer.cs">
-      <DependentUpon>NewNodes.cs</DependentUpon>
+    <Compile Include="Calendar\Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Nodes.cs">
       <SubType>Form</SubType>
@@ -91,6 +90,11 @@
     </Compile>
     <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,39 +107,57 @@
     <Compile Include="TestMenuForm.Designer.cs">
       <DependentUpon>TestMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\UserControlBlank.cs">
+    <Compile Include="Calendar\Control\UserControlBlank.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\UserControlBlank.Designer.cs">
+    <Compile Include="Calendar\Control\UserControlBlank.Designer.cs">
       <DependentUpon>UserControlBlank.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\UserControlDays.cs">
+    <Compile Include="Calendar\Control\UserControlDays.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\UserControlDays.Designer.cs">
+    <Compile Include="Calendar\Control\UserControlDays.Designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EventForm.resx">
+    <EmbeddedResource Include="Calendar\EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="STYLES\Animation\Animation.cs" />
     <Compile Include="STYLES\Animation\Animator.cs" />
-    <Compile Include="STYLES\Components\EgoldsFormStyle.cs" />
+    <Compile Include="STYLES\Components\EgoldsFormStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="STYLES\Components\EgoldsFormStyle.Designer.cs">
       <DependentUpon>EgoldsFormStyle.cs</DependentUpon>
     </Compile>
     <Compile Include="STYLES\Components\EgoldsStyle.cs" />
-    <Compile Include="STYLES\Components\RoundingButtonsComponent.cs" />
+    <Compile Include="STYLES\Components\RoundingButtonsComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="STYLES\Components\RoundingButtonsComponent.Designer.cs">
       <DependentUpon>RoundingButtonsComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="STYLES\Controls\EgoldsCard.cs" />
-    <Compile Include="STYLES\Controls\EgoldsGoogleTextBox.cs" />
-    <Compile Include="STYLES\Controls\EgoldsProgressBar.cs" />
-    <Compile Include="STYLES\Controls\EgoldsRadioButton.cs" />
-    <Compile Include="STYLES\Controls\EgoldsToggleSwitch.cs" />
-    <Compile Include="STYLES\Controls\ShadowedForm.cs" />
-    <Compile Include="STYLES\Controls\yt_Button.cs" />
+    <Compile Include="STYLES\Controls\EgoldsCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="STYLES\Controls\EgoldsGoogleTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="STYLES\Controls\EgoldsProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="STYLES\Controls\EgoldsRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="STYLES\Controls\EgoldsToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="STYLES\Controls\ShadowedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STYLES\Controls\yt_Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="STYLES\Drawer.cs" />
     <Compile Include="STYLES\FlatColors.cs" />
     <EmbeddedResource Include="Graph.resx">
@@ -147,8 +169,8 @@
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewNodes.resx">
-      <DependentUpon>NewNodes.cs</DependentUpon>
+    <EmbeddedResource Include="Calendar\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nodes.resx">
       <DependentUpon>Nodes.cs</DependentUpon>
@@ -156,6 +178,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
@@ -163,10 +186,10 @@
     <EmbeddedResource Include="TestMenuForm.resx">
       <DependentUpon>TestMenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\UserControlBlank.resx">
+    <EmbeddedResource Include="Calendar\Control\UserControlBlank.resx">
       <DependentUpon>UserControlBlank.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\UserControlDays.resx">
+    <EmbeddedResource Include="Calendar\Control\UserControlDays.resx">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -183,49 +206,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cancel.png" />
+    <None Include="Properties\Resources\cancel.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minus.png" />
+    <None Include="Properties\Resources\minus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\maximize.png" />
+    <None Include="Properties\Resources\maximize.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1486564399-close_81512.png" />
+    <None Include="Properties\Resources\login.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-login-64.png" />
+    <None Include="Properties\Resources\unlock.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-login-64 %281%29.png" />
+    <None Include="Properties\Resources\icons8-user-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-login-64 %282%29.png" />
+    <None Include="Properties\Resources\icons8-lock-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\key.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\unlock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-user-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-lock-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-unlock-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login3.PNG" />
+    <None Include="Properties\Resources\icons8-unlock-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonBackToNodes = new System.Windows.Forms.Button();
+            this.buttonBackToMenu = new System.Windows.Forms.Button();
             this.daycontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonPrevious = new System.Windows.Forms.Button();
@@ -46,29 +46,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonBackToNodes
+            // buttonBackToMenu
             // 
-            this.buttonBackToNodes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
-            this.buttonBackToNodes.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonBackToNodes.FlatAppearance.BorderSize = 0;
-            this.buttonBackToNodes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBackToNodes.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold);
-            this.buttonBackToNodes.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonBackToNodes.Location = new System.Drawing.Point(21, 742);
-            this.buttonBackToNodes.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonBackToNodes.Name = "buttonBackToNodes";
-            this.buttonBackToNodes.Size = new System.Drawing.Size(358, 62);
-            this.buttonBackToNodes.TabIndex = 0;
-            this.buttonBackToNodes.Text = "BACK TO MENU";
-            this.buttonBackToNodes.UseVisualStyleBackColor = false;
-            this.buttonBackToNodes.Click += new System.EventHandler(this.buttonBackToNodes_Click);
+            this.buttonBackToMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
+            this.buttonBackToMenu.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonBackToMenu.FlatAppearance.BorderSize = 0;
+            this.buttonBackToMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBackToMenu.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold);
+            this.buttonBackToMenu.ForeColor = System.Drawing.SystemColors.Info;
+            this.buttonBackToMenu.Location = new System.Drawing.Point(16, 603);
+            this.buttonBackToMenu.Name = "buttonBackToMenu";
+            this.buttonBackToMenu.Size = new System.Drawing.Size(268, 50);
+            this.buttonBackToMenu.TabIndex = 0;
+            this.buttonBackToMenu.Text = "BACK TO MENU";
+            this.buttonBackToMenu.UseVisualStyleBackColor = false;
+            this.buttonBackToMenu.Click += new System.EventHandler(this.buttonBackToMenu_Click);
             // 
             // daycontainer
             // 
-            this.daycontainer.Location = new System.Drawing.Point(16, 74);
-            this.daycontainer.Margin = new System.Windows.Forms.Padding(4);
+            this.daycontainer.Location = new System.Drawing.Point(12, 60);
             this.daycontainer.Name = "daycontainer";
-            this.daycontainer.Size = new System.Drawing.Size(1464, 658);
+            this.daycontainer.Size = new System.Drawing.Size(1098, 535);
             this.daycontainer.TabIndex = 1;
             // 
             // buttonNext
@@ -79,10 +77,9 @@
             this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNext.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonNext.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonNext.Location = new System.Drawing.Point(1342, 742);
-            this.buttonNext.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonNext.Location = new System.Drawing.Point(1006, 603);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(138, 63);
+            this.buttonNext.Size = new System.Drawing.Size(104, 51);
             this.buttonNext.TabIndex = 2;
             this.buttonNext.Text = "NEXT";
             this.buttonNext.UseVisualStyleBackColor = false;
@@ -96,10 +93,9 @@
             this.buttonPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrevious.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPrevious.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonPrevious.Location = new System.Drawing.Point(1167, 741);
-            this.buttonPrevious.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPrevious.Location = new System.Drawing.Point(875, 602);
             this.buttonPrevious.Name = "buttonPrevious";
-            this.buttonPrevious.Size = new System.Drawing.Size(157, 63);
+            this.buttonPrevious.Size = new System.Drawing.Size(118, 51);
             this.buttonPrevious.TabIndex = 3;
             this.buttonPrevious.Text = "PREVIOUS";
             this.buttonPrevious.UseVisualStyleBackColor = false;
@@ -110,10 +106,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(69, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(52, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 32);
+            this.label1.Size = new System.Drawing.Size(82, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Sunday";
             // 
@@ -122,10 +117,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(484, 39);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(363, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 32);
+            this.label2.Size = new System.Drawing.Size(94, 24);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tuesday";
             // 
@@ -134,10 +128,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(275, 39);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(206, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 32);
+            this.label3.Size = new System.Drawing.Size(82, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = "Monday";
             // 
@@ -146,10 +139,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(681, 39);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(511, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 32);
+            this.label4.Size = new System.Drawing.Size(118, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "Wednesday";
             // 
@@ -158,10 +150,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(897, 39);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(673, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 32);
+            this.label5.Size = new System.Drawing.Size(106, 24);
             this.label5.TabIndex = 8;
             this.label5.Text = "Thursday";
             // 
@@ -170,10 +161,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(1115, 39);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(836, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 32);
+            this.label6.Size = new System.Drawing.Size(82, 24);
             this.label6.TabIndex = 9;
             this.label6.Text = "Friday";
             // 
@@ -182,10 +172,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(1319, 39);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(989, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 32);
+            this.label7.Size = new System.Drawing.Size(106, 24);
             this.label7.TabIndex = 10;
             this.label7.Text = "Saturday";
             // 
@@ -194,10 +183,9 @@
             this.LBDATE.AutoSize = true;
             this.LBDATE.Font = new System.Drawing.Font("Consolas", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LBDATE.ForeColor = System.Drawing.SystemColors.Info;
-            this.LBDATE.Location = new System.Drawing.Point(652, 751);
-            this.LBDATE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBDATE.Location = new System.Drawing.Point(489, 610);
             this.LBDATE.Name = "LBDATE";
-            this.LBDATE.Size = new System.Drawing.Size(197, 38);
+            this.LBDATE.Size = new System.Drawing.Size(164, 32);
             this.LBDATE.TabIndex = 11;
             this.LBDATE.Text = "MONTH YEAR";
             // 
@@ -206,10 +194,10 @@
             this.pictureBoxClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(65)))), ((int)(((byte)(118)))));
             this.pictureBoxClose.BackgroundImage = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
-            this.pictureBoxClose.Location = new System.Drawing.Point(1459, 0);
+            this.pictureBoxClose.Location = new System.Drawing.Point(1094, 0);
             this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxClose.Name = "pictureBoxClose";
-            this.pictureBoxClose.Size = new System.Drawing.Size(40, 30);
+            this.pictureBoxClose.Size = new System.Drawing.Size(30, 24);
             this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxClose.TabIndex = 15;
             this.pictureBoxClose.TabStop = false;
@@ -218,10 +206,10 @@
             // pictureBoxMinimize
             // 
             this.pictureBoxMinimize.Image = global::LearningSpace.Properties.Resources.minus;
-            this.pictureBoxMinimize.Location = new System.Drawing.Point(1416, 0);
+            this.pictureBoxMinimize.Location = new System.Drawing.Point(1062, 0);
             this.pictureBoxMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxMinimize.Name = "pictureBoxMinimize";
-            this.pictureBoxMinimize.Size = new System.Drawing.Size(40, 30);
+            this.pictureBoxMinimize.Size = new System.Drawing.Size(30, 24);
             this.pictureBoxMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMinimize.TabIndex = 14;
             this.pictureBoxMinimize.TabStop = false;
@@ -229,10 +217,10 @@
             // 
             // Calendar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(65)))), ((int)(((byte)(118)))));
-            this.ClientSize = new System.Drawing.Size(1496, 816);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(65)))), ((int)(((byte)(118)))));
+            this.ClientSize = new System.Drawing.Size(1122, 663);
             this.Controls.Add(this.LBDATE);
             this.Controls.Add(this.pictureBoxClose);
             this.Controls.Add(this.pictureBoxMinimize);
@@ -246,9 +234,8 @@
             this.Controls.Add(this.buttonPrevious);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.daycontainer);
-            this.Controls.Add(this.buttonBackToNodes);
+            this.Controls.Add(this.buttonBackToMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Calendar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewNotes";
@@ -262,7 +249,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonBackToNodes;
+        private System.Windows.Forms.Button buttonBackToMenu;
         private System.Windows.Forms.FlowLayoutPanel daycontainer;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonPrevious;

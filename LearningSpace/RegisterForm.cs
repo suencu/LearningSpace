@@ -14,51 +14,47 @@ namespace LearningSpace
 {
     public partial class RegisterForm : Form
     {
-        //переменные для проекта
-
-        
+        #region -- Переменные для проекта --
+        //для перехода между Формами
         Thread thread;
+        //для DataBase
         DataBase dataBase;
         MySqlCommand command;
         MySqlDataAdapter adapter;
         DataTable dataTable;
+        //для движения Формой
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
+        //цвет
         string HexColorForFontText = "#352c3c";
         Color TextBoxColor;
         string HexColorForFontTextEror = "#ce2d30";
         Color TextBoxColorEror;
+        #endregion
 
-        //=========================
         public RegisterForm()
         {
             InitializeComponent();
-            passwordStub();
             InitialTextBox();
+            //инициализация объектов для DataBase
             dataBase = new DataBase();
             adapter = new MySqlDataAdapter();
             dataTable = new DataTable();
+            //установка цвета
             TextBoxColor = ColorTranslator.FromHtml(HexColorForFontText);
             TextBoxColorEror = ColorTranslator.FromHtml(HexColorForFontTextEror);
 
-            
         }
-        //нажатие на кнопки 
-        private void CloseMenu(object sender, EventArgs e)
-        {
-            Close();
-        }
-        private void MinimizeAdd(object sender, EventArgs e)
-        {
-             this.WindowState = FormWindowState.Minimized;
-        }
+
+        #region -- Нажатие на обяекты --
+        //Button
         private void GoToMenu(object sender, EventArgs e)
         {
-            
+            //проверка ввода данных
             if (checkEnteredDate())
             {
                 MessageBox.Show("Некоректрые данные");
-                OpenRegisterForm();
+                UpdateRegisterForm();
                 return;
             }
 
@@ -67,13 +63,16 @@ namespace LearningSpace
             command.Parameters.Add("@password", MySqlDbType.VarChar).Value = passwordBox.Text;
             command.Parameters.Add("@confirmPassword", MySqlDbType.VarChar).Value = checkPasswordBox.Text;
 
+            #region --Open and Close Connection--
+
             dataBase.OpenConnection();
 
+            //Проверка на корректность работы
             if(command.ExecuteNonQuery() == 1)
             {
                 MessageBox.Show("Вы зашли в систему");
 
-                thread = new Thread(OpenNewForm);
+                thread = new Thread(OpenMenuForm);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
                 Close();
@@ -84,37 +83,7 @@ namespace LearningSpace
             }
 
             dataBase.CloseConnection();
-        }
-        public bool checkEnteredDate()
-        {
-            if (loginBox.Text == null || passwordBox.Text == null || checkPasswordBox.Text == null || loginBox.Text == "Login" || passwordBox.Text == "Password" || checkPasswordBox.Text == "Confirm password")
-            {
-
-                OpenRegisterForm();
-                return true;
-            }
-            else if (passwordBox.Text != checkPasswordBox.Text)
-            {
-
-                OpenRegisterForm();
-                return true;
-            }
-
-            MySqlCommand command1 = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @login", dataBase.GetMySqlConnection());
-            command1.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginBox.Text;
-
-            adapter.SelectCommand = command1;
-            adapter.Fill(dataTable);
-
-            if (dataTable.Rows.Count > 0)
-            {
-                MessageBox.Show("This login already exists, enter another Login.");
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            #endregion
         }
         private void GoToAuthorization(object sender, EventArgs e)
         {
@@ -123,7 +92,53 @@ namespace LearningSpace
             thread.Start();
             Close();
         }
-        private void OpenNewForm()
+        
+        //picterBox
+        private void CloseMenu(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void MinimizeAdd(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        //CheckBox
+        private void checkBoxForPassword_Click(object sender, EventArgs e)
+        {
+            if (checkBoxForPassword.Checked)
+            {
+                passwordBox.PasswordChar = '\0';
+                checkPasswordBox.PasswordChar = '\0';
+            }
+            else
+            {
+                if (passwordBox.Text == "Password")
+                {
+                    passwordBox.PasswordChar = '\0';
+                }
+                if (checkPasswordBox.Text == "Confirm passwor")
+                {
+                    checkPasswordBox.PasswordChar = '\0';
+                }
+
+                passwordBox.PasswordChar = '•';
+                checkPasswordBox.PasswordChar = '•';
+            }
+        }
+
+        //Временная кнопка для перехода в меню 
+        private void buttonForIgor_Click(object sender, EventArgs e)
+        {
+            thread = new Thread(OpenMenuForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            Close();
+        }
+        #endregion
+
+        #region -- Загрузка Форм --
+        private void OpenMenuForm()
         {
             Application.Run(new MenuForm());
         }
@@ -131,11 +146,7 @@ namespace LearningSpace
         {
             Application.Run(new AuthorizationForm());
         }
-        private void OpenRegisterForm()
-        {
-            UpdateForm();
-        }
-        private void UpdateForm()
+        private void UpdateRegisterForm()
         {
             loginBox.Text = "Login";
             loginBox.ForeColor = TextBoxColorEror;
@@ -148,31 +159,11 @@ namespace LearningSpace
             checkPasswordBox.Text = "Confirm password";
             checkPasswordBox.ForeColor = TextBoxColorEror;
         }
-        private void buttonForIgor_Click(object sender, EventArgs e)
-        {
-            thread = new Thread(OpenNewForm);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            Close();
-        }
-        //работа с формами 
+        #endregion
 
-        private void passwordStub()
-        {
-            passwordBox.Text = "Password";
-            passwordBox.ForeColor = TextBoxColor;
+        #region -- Работа с textBox --
 
-            passwordBox.AutoSize = false;
-            passwordBox.Size = new Size(this.passwordBox.Size.Width, 40);
-
-            checkPasswordBox.Text = "Confirm password";
-            checkPasswordBox.ForeColor = TextBoxColor;
-
-            checkPasswordBox.AutoSize = false;
-            checkPasswordBox.Size = new Size(this.passwordBox.Size.Width, 40);
-        }
-
-        //работа с textBox
+        //Инифиализация
         private void InitialTextBox()
         {
             loginBox.Text = "Login";
@@ -185,6 +176,7 @@ namespace LearningSpace
             checkPasswordBox.ForeColor = TextBoxColor;
 
         }
+        //Login
         private void loginBox_Enter(object sender, EventArgs e)
         {
             if (loginBox.Text == "Login")
@@ -201,6 +193,7 @@ namespace LearningSpace
                 loginBox.ForeColor = TextBoxColor;
             }
         }
+        //Password
         private void passwordBox_Enter(object sender, EventArgs e)
         {
             if (passwordBox.Text == "Password")
@@ -219,6 +212,7 @@ namespace LearningSpace
                 passwordBox.ForeColor = TextBoxColor;
             }
         }
+        //Confirm Password
         private void checkPasswordBox_Leave(object sender, EventArgs e)
         {
             if (checkPasswordBox.Text == "")
@@ -237,7 +231,11 @@ namespace LearningSpace
                 checkPasswordBox.ForeColor = TextBoxColor;
             }
         }
-        //движение формы
+
+        #endregion
+
+        #region -- Движение Формой --
+        //Form
         private void RegisterForm_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
@@ -255,6 +253,7 @@ namespace LearningSpace
             dragging = true;
             startPoint = new Point(e.X, e.Y);
         }
+        //panel
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
@@ -272,30 +271,39 @@ namespace LearningSpace
             dragging = true;
             startPoint = new Point(e.X, e.Y);
         }
-
-        //работа с CheckBox
-        private void checkBoxForPassword_Click(object sender, EventArgs e)
+        #endregion
+        
+        /// <summary>
+        /// 1)Проверка на null всех полей 
+        /// 2)Проверка на равенство password и ConfirmPassword
+        /// 3)Проверка на существование Login в DataBase
+        /// </summary>
+        /// <returns>TRUE: если что-то введено не так</returns>
+        public bool checkEnteredDate()
         {
-            if (checkBoxForPassword.Checked)
+            if (loginBox.Text == null || passwordBox.Text == null || checkPasswordBox.Text == null || loginBox.Text == "Login" || passwordBox.Text == "Password" || checkPasswordBox.Text == "Confirm password")
             {
-                passwordBox.PasswordChar = '\0';
-                checkPasswordBox.PasswordChar = '\0';
+                return true;
+            }
+            else if (passwordBox.Text != checkPasswordBox.Text)
+            {
+                return true;
+            }
+
+            MySqlCommand commandPullOutLogin = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @login", dataBase.GetMySqlConnection());
+            commandPullOutLogin.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginBox.Text;
+
+            adapter.SelectCommand = commandPullOutLogin;
+            adapter.Fill(dataTable);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                MessageBox.Show("This login already exists, enter another Login.");
+                return true;
             }
             else
             {
-                if(passwordBox.Text == "Password")
-                {
-                    passwordBox.PasswordChar = '\0';
-                }
-                else if(checkPasswordBox.Text == "Confirm passwor")
-                {
-                    checkPasswordBox.PasswordChar = '\0';
-                }
-                else
-                { 
-                    passwordBox.PasswordChar = '•';
-                    checkPasswordBox.PasswordChar = '•';
-                }
+                return false;
             }
         }
     }

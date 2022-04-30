@@ -1,6 +1,6 @@
 ﻿namespace LearningSpace
 {
-    partial class NewNodes
+    partial class Calendar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonBackToNodes = new System.Windows.Forms.Button();
+            this.buttonBackToMenu = new System.Windows.Forms.Button();
             this.daycontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonPrevious = new System.Windows.Forms.Button();
@@ -46,21 +46,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonBackToNodes
+            // buttonBackToMenu
             // 
-            this.buttonBackToNodes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
-            this.buttonBackToNodes.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonBackToNodes.FlatAppearance.BorderSize = 0;
-            this.buttonBackToNodes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBackToNodes.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold);
-            this.buttonBackToNodes.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonBackToNodes.Location = new System.Drawing.Point(960, 601);
-            this.buttonBackToNodes.Name = "buttonBackToNodes";
-            this.buttonBackToNodes.Size = new System.Drawing.Size(150, 50);
-            this.buttonBackToNodes.TabIndex = 0;
-            this.buttonBackToNodes.Text = "BACK";
-            this.buttonBackToNodes.UseVisualStyleBackColor = false;
-            this.buttonBackToNodes.Click += new System.EventHandler(this.buttonBackToNodes_Click);
+            this.buttonBackToMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
+            this.buttonBackToMenu.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonBackToMenu.FlatAppearance.BorderSize = 0;
+            this.buttonBackToMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBackToMenu.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold);
+            this.buttonBackToMenu.ForeColor = System.Drawing.SystemColors.Info;
+            this.buttonBackToMenu.Location = new System.Drawing.Point(16, 603);
+            this.buttonBackToMenu.Name = "buttonBackToMenu";
+            this.buttonBackToMenu.Size = new System.Drawing.Size(268, 50);
+            this.buttonBackToMenu.TabIndex = 0;
+            this.buttonBackToMenu.Text = "BACK TO MENU";
+            this.buttonBackToMenu.UseVisualStyleBackColor = false;
+            this.buttonBackToMenu.Click += new System.EventHandler(this.buttonBackToMenu_Click);
             // 
             // daycontainer
             // 
@@ -75,13 +75,13 @@
             this.buttonNext.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
             this.buttonNext.FlatAppearance.BorderSize = 0;
             this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNext.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonNext.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonNext.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonNext.Location = new System.Drawing.Point(171, 601);
+            this.buttonNext.Location = new System.Drawing.Point(1006, 603);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext.Size = new System.Drawing.Size(104, 51);
             this.buttonNext.TabIndex = 2;
-            this.buttonNext.Text = "Next";
+            this.buttonNext.Text = "NEXT";
             this.buttonNext.UseVisualStyleBackColor = false;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
@@ -91,20 +91,20 @@
             this.buttonPrevious.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
             this.buttonPrevious.FlatAppearance.BorderSize = 0;
             this.buttonPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPrevious.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPrevious.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPrevious.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonPrevious.Location = new System.Drawing.Point(90, 601);
+            this.buttonPrevious.Location = new System.Drawing.Point(875, 602);
             this.buttonPrevious.Name = "buttonPrevious";
-            this.buttonPrevious.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrevious.Size = new System.Drawing.Size(118, 51);
             this.buttonPrevious.TabIndex = 3;
-            this.buttonPrevious.Text = "Previous";
+            this.buttonPrevious.Text = "PREVIOUS";
             this.buttonPrevious.UseVisualStyleBackColor = false;
             this.buttonPrevious.Click += new System.EventHandler(this.buttonPrevious_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Italic);
+            this.label1.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
             this.label1.Location = new System.Drawing.Point(52, 32);
             this.label1.Name = "label1";
@@ -115,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Italic);
+            this.label2.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
             this.label2.Location = new System.Drawing.Point(363, 32);
             this.label2.Name = "label2";
@@ -126,7 +126,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Italic);
+            this.label3.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
             this.label3.Location = new System.Drawing.Point(206, 32);
             this.label3.Name = "label3";
@@ -137,7 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Italic);
+            this.label4.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
             this.label4.Location = new System.Drawing.Point(511, 32);
             this.label4.Name = "label4";
@@ -148,7 +148,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Italic);
+            this.label5.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
             this.label5.Location = new System.Drawing.Point(673, 32);
             this.label5.Name = "label5";
@@ -159,7 +159,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Italic);
+            this.label6.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
             this.label6.Location = new System.Drawing.Point(836, 32);
             this.label6.Name = "label6";
@@ -170,7 +170,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Italic);
+            this.label7.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
             this.label7.Location = new System.Drawing.Point(989, 32);
             this.label7.Name = "label7";
@@ -181,17 +181,18 @@
             // LBDATE
             // 
             this.LBDATE.AutoSize = true;
-            this.LBDATE.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Italic);
+            this.LBDATE.Font = new System.Drawing.Font("Consolas", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LBDATE.ForeColor = System.Drawing.SystemColors.Info;
-            this.LBDATE.Location = new System.Drawing.Point(52, 8);
+            this.LBDATE.Location = new System.Drawing.Point(489, 610);
             this.LBDATE.Name = "LBDATE";
-            this.LBDATE.Size = new System.Drawing.Size(130, 24);
+            this.LBDATE.Size = new System.Drawing.Size(164, 32);
             this.LBDATE.TabIndex = 11;
             this.LBDATE.Text = "MONTH YEAR";
             // 
             // pictureBoxClose
             // 
             this.pictureBoxClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(65)))), ((int)(((byte)(118)))));
+            this.pictureBoxClose.BackgroundImage = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBoxClose.Location = new System.Drawing.Point(1094, 0);
             this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
@@ -214,15 +215,15 @@
             this.pictureBoxMinimize.TabStop = false;
             this.pictureBoxMinimize.Click += new System.EventHandler(this.MinimizeAdd);
             // 
-            // NewNodes
+            // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(65)))), ((int)(((byte)(118)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(65)))), ((int)(((byte)(118)))));
             this.ClientSize = new System.Drawing.Size(1122, 663);
+            this.Controls.Add(this.LBDATE);
             this.Controls.Add(this.pictureBoxClose);
             this.Controls.Add(this.pictureBoxMinimize);
-            this.Controls.Add(this.LBDATE);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -233,9 +234,9 @@
             this.Controls.Add(this.buttonPrevious);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.daycontainer);
-            this.Controls.Add(this.buttonBackToNodes);
+            this.Controls.Add(this.buttonBackToMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NewNodes";
+            this.Name = "Calendar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewNotes";
             this.Load += new System.EventHandler(this.NewNodes_Load);
@@ -248,7 +249,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonBackToNodes;
+        private System.Windows.Forms.Button buttonBackToMenu;
         private System.Windows.Forms.FlowLayoutPanel daycontainer;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonPrevious;

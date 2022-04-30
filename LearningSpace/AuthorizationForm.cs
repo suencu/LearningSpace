@@ -14,27 +14,32 @@ namespace LearningSpace
 {
     public partial class AuthorizationForm : Form
     {
-        //переменные для проекта 
+        #region -- Переменные --
+        //для перехода между Формами
         Thread thread;
+        //для движения Формой
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
+        //цвет
         string HexColorForFontText= "#352c3c";
         Color TextBoxColor;
         string HexColorForFontTextEror= "#ce2d30";
         Color TextBoxColorEror;
-        //==========================
+        #endregion
+
         public AuthorizationForm()
         {
             InitializeComponent();
-            passwordStub();
             InitialTextBox();
-            
+
+            //установка цвета
             TextBoxColor = ColorTranslator.FromHtml(HexColorForFontText);
             TextBoxColorEror = ColorTranslator.FromHtml(HexColorForFontTextEror);
-
         }
 
-        //нажатие на кнопки 
+        #region -- Нажатие на объекты --
+
+        //button  
         private void GoToMenu(object sender, EventArgs e)
         {
             //получаем данные пользователя 
@@ -60,8 +65,7 @@ namespace LearningSpace
             //проверяем ряды так как если пользователь есть то у него есть 3 ряд ID
             if (dataTable.Rows.Count > 0)
             {
-
-                thread = new Thread(OpenNewForm);
+                thread = new Thread(OpenMenuForm);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
                 Close();
@@ -69,25 +73,20 @@ namespace LearningSpace
             else
             {
                 MessageBox.Show("You're not in the database. ");
-                OpenAuthorizationForm();
+                UpdateAuthorizationForm();
             }
 
 
         }
-        private void OpenAuthorizationForm()
+        private void GoToRegister(object sender, EventArgs e)
         {
-            Updateform();
+            thread = new Thread(OpenRegisterForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            Close();
         }
-        private void Updateform()
-        {
-            loginBox.Text = "Login";
-            loginBox.ForeColor = TextBoxColorEror;
-
-            passwordBox.PasswordChar = '\0';
-            passwordBox.Text = "Password";
-            passwordBox.ForeColor = TextBoxColorEror;
-        }
-        //кнопки раширить закрыть свернуть
+       
+        //picterBox
         private void pictureBoxClose_DoubleClick(object sender, EventArgs e)
         {
             Close();
@@ -96,29 +95,20 @@ namespace LearningSpace
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        private void MaximaziApp(object sender, EventArgs e)
-        {
-            if (WindowState.ToString() == "Normal")
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-        }
-        //==============================
-        private void GoToRegister(object sender, EventArgs e)
-        {
-            thread = new Thread(OpenRegisterForm);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            Close();
-        }
 
-        //работа с меню
-        
-        private void OpenNewForm()
+        #endregion
+
+        #region -- Загрузка форм --
+        private void UpdateAuthorizationForm()
+        {
+            loginBox.Text = "Login";
+            loginBox.ForeColor = TextBoxColorEror;
+
+            passwordBox.PasswordChar = '\0';
+            passwordBox.Text = "Password";
+            passwordBox.ForeColor = TextBoxColorEror;
+        }
+        private void OpenMenuForm()
         {
             Application.Run(new MenuForm());
         }
@@ -126,28 +116,22 @@ namespace LearningSpace
         {
             Application.Run(new RegisterForm());
         }
-        private void passwordStub()
-        {
-            passwordBox.Text = "Password";
-            passwordBox.ForeColor = TextBoxColor;
 
-            passwordBox.AutoSize = false;
-            passwordBox.Size = new Size(this.passwordBox.Size.Width, 40);
+        #endregion
 
-        }
-
-        //работа с textBox
+        #region -- Работа с textBox --
         private void InitialTextBox()
         {
             loginBox.Text = "Login";
             loginBox.ForeColor = TextBoxColor;
             passwordBox.Text = "Password";
+            passwordBox.ForeColor = TextBoxColor;
         }
         private void loginBox_Enter(object sender, EventArgs e)
         {
             if (loginBox.Text == "Login")
             {
-                loginBox.Text = "";
+                loginBox.Text = null;
                 loginBox.ForeColor = Color.Black;
             }
         }
@@ -177,10 +161,11 @@ namespace LearningSpace
                 passwordBox.ForeColor = TextBoxColor;
             }
         }
+        #endregion
 
-        #region движение меню 
-        
+        #region -- Движение Формой -- 
 
+        //panel
         private void leftPanelMouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
@@ -201,6 +186,7 @@ namespace LearningSpace
             dragging = false;
         }
 
+        //form
         private void AuthorizationForm_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
@@ -223,5 +209,6 @@ namespace LearningSpace
 
 
         #endregion
+
     }
 }

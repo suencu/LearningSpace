@@ -33,71 +33,103 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.pictureBoxClose = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             this.SuspendLayout();
             // 
             // textDate
             // 
+            this.textDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
+            this.textDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textDate.Enabled = false;
-            this.textDate.Location = new System.Drawing.Point(61, 58);
-            this.textDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textDate.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
+            this.textDate.ForeColor = System.Drawing.SystemColors.Info;
+            this.textDate.Location = new System.Drawing.Point(82, 63);
             this.textDate.Name = "textDate";
-            this.textDate.Size = new System.Drawing.Size(432, 22);
+            this.textDate.Size = new System.Drawing.Size(325, 25);
             this.textDate.TabIndex = 0;
             // 
             // textEvent
             // 
-            this.textEvent.Location = new System.Drawing.Point(61, 132);
-            this.textEvent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEvent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
+            this.textEvent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textEvent.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
+            this.textEvent.ForeColor = System.Drawing.SystemColors.Info;
+            this.textEvent.Location = new System.Drawing.Point(82, 191);
             this.textEvent.Name = "textEvent";
-            this.textEvent.Size = new System.Drawing.Size(432, 22);
+            this.textEvent.Size = new System.Drawing.Size(325, 25);
             this.textEvent.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
+            this.label1.Location = new System.Drawing.Point(82, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 16);
+            this.label1.Size = new System.Drawing.Size(45, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Date";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 112);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Info;
+            this.label2.Location = new System.Drawing.Point(82, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.Size = new System.Drawing.Size(54, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Event";
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(395, 190);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
+            this.buttonSave.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonSave.FlatAppearance.BorderSize = 0;
+            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSave.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.ForeColor = System.Drawing.SystemColors.Info;
+            this.buttonSave.Location = new System.Drawing.Point(387, 261);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(100, 28);
-            this.buttonSave.TabIndex = 4;
+            this.buttonSave.Size = new System.Drawing.Size(123, 45);
+            this.buttonSave.TabIndex = 3;
             this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // pictureBoxClose
+            // 
+            this.pictureBoxClose.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxClose.BackgroundImage = global::LearningSpace.Properties.Resources.cancel;
+            this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
+            this.pictureBoxClose.Location = new System.Drawing.Point(503, 0);
+            this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxClose.Name = "pictureBoxClose";
+            this.pictureBoxClose.Size = new System.Drawing.Size(30, 24);
+            this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxClose.TabIndex = 16;
+            this.pictureBoxClose.TabStop = false;
+            this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_);
             // 
             // EventForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 260);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(102)))), ((int)(((byte)(121)))));
+            this.ClientSize = new System.Drawing.Size(533, 318);
+            this.Controls.Add(this.pictureBoxClose);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textEvent);
             this.Controls.Add(this.textDate);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EventForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EventForm";
             this.Load += new System.EventHandler(this.EventForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +142,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.PictureBox pictureBoxClose;
     }
 }

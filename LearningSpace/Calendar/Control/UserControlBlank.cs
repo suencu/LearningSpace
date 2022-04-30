@@ -12,9 +12,15 @@ namespace LearningSpace
 {
     public partial class UserControlBlank : UserControl
     {
+        // Смотрим размер 150/108
         public UserControlBlank()
         {
             InitializeComponent();
+        }
+
+        private void UserControlBlank_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

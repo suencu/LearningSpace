@@ -55,7 +55,7 @@
             this.buttonBackToNodes.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold);
             this.buttonBackToNodes.ForeColor = System.Drawing.SystemColors.Info;
             this.buttonBackToNodes.Location = new System.Drawing.Point(21, 742);
-            this.buttonBackToNodes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBackToNodes.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBackToNodes.Name = "buttonBackToNodes";
             this.buttonBackToNodes.Size = new System.Drawing.Size(358, 62);
             this.buttonBackToNodes.TabIndex = 0;
@@ -66,7 +66,7 @@
             // daycontainer
             // 
             this.daycontainer.Location = new System.Drawing.Point(16, 74);
-            this.daycontainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.daycontainer.Margin = new System.Windows.Forms.Padding(4);
             this.daycontainer.Name = "daycontainer";
             this.daycontainer.Size = new System.Drawing.Size(1464, 658);
             this.daycontainer.TabIndex = 1;
@@ -80,7 +80,7 @@
             this.buttonNext.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonNext.ForeColor = System.Drawing.SystemColors.Info;
             this.buttonNext.Location = new System.Drawing.Point(1342, 742);
-            this.buttonNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNext.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(138, 63);
             this.buttonNext.TabIndex = 2;
@@ -97,7 +97,7 @@
             this.buttonPrevious.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPrevious.ForeColor = System.Drawing.SystemColors.Info;
             this.buttonPrevious.Location = new System.Drawing.Point(1167, 741);
-            this.buttonPrevious.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPrevious.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPrevious.Name = "buttonPrevious";
             this.buttonPrevious.Size = new System.Drawing.Size(157, 63);
             this.buttonPrevious.TabIndex = 3;
@@ -197,13 +197,14 @@
             this.LBDATE.Location = new System.Drawing.Point(652, 751);
             this.LBDATE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBDATE.Name = "LBDATE";
-            this.LBDATE.Size = new System.Drawing.Size(207, 40);
+            this.LBDATE.Size = new System.Drawing.Size(197, 38);
             this.LBDATE.TabIndex = 11;
             this.LBDATE.Text = "MONTH YEAR";
             // 
             // pictureBoxClose
             // 
             this.pictureBoxClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(65)))), ((int)(((byte)(118)))));
+            this.pictureBoxClose.BackgroundImage = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBoxClose.Location = new System.Drawing.Point(1459, 0);
             this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
@@ -247,7 +248,7 @@
             this.Controls.Add(this.daycontainer);
             this.Controls.Add(this.buttonBackToNodes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Calendar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewNotes";

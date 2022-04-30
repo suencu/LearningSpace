@@ -153,12 +153,12 @@
             // pictureLogin
             // 
             this.pictureLogin.BackColor = System.Drawing.Color.Transparent;
-            this.pictureLogin.BackgroundImage = global::LearningSpace.Properties.Resources.login;
+            this.pictureLogin.BackgroundImage = global::LearningSpace.Properties.Resources.login_a;
             this.pictureLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureLogin.Location = new System.Drawing.Point(80, 227);
+            this.pictureLogin.Location = new System.Drawing.Point(74, 225);
             this.pictureLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pictureLogin.Name = "pictureLogin";
-            this.pictureLogin.Size = new System.Drawing.Size(89, 85);
+            this.pictureLogin.Size = new System.Drawing.Size(76, 72);
             this.pictureLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureLogin.TabIndex = 3;
             this.pictureLogin.TabStop = false;
@@ -166,13 +166,13 @@
             // picturePassword
             // 
             this.picturePassword.BackColor = System.Drawing.Color.Transparent;
-            this.picturePassword.BackgroundImage = global::LearningSpace.Properties.Resources.unlock;
+            this.picturePassword.BackgroundImage = global::LearningSpace.Properties.Resources.password_a;
             this.picturePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picturePassword.InitialImage = null;
-            this.picturePassword.Location = new System.Drawing.Point(93, 313);
+            this.picturePassword.Location = new System.Drawing.Point(74, 305);
             this.picturePassword.Margin = new System.Windows.Forms.Padding(4);
             this.picturePassword.Name = "picturePassword";
-            this.picturePassword.Size = new System.Drawing.Size(63, 63);
+            this.picturePassword.Size = new System.Drawing.Size(76, 72);
             this.picturePassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturePassword.TabIndex = 2;
             this.picturePassword.TabStop = false;
@@ -180,6 +180,7 @@
             // pictureBoxClose
             // 
             this.pictureBoxClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
+            this.pictureBoxClose.BackgroundImage = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBoxClose.Location = new System.Drawing.Point(660, 0);
             this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);

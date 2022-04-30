@@ -116,6 +116,7 @@ namespace LearningSpace
         {
             Application.Run(new RegisterForm());
         }
+
         #endregion
 
         #region -- Работа с textBox --

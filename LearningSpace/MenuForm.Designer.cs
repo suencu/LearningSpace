@@ -171,7 +171,7 @@
             // pictureBoxClose
             // 
             this.pictureBoxClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
-            this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
+            this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.minus;
             this.pictureBoxClose.Location = new System.Drawing.Point(1547, 0);
             this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxClose.Name = "pictureBoxClose";
@@ -207,6 +207,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
+            this.pictureBox1.BackgroundImage = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBox1.Image = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBox1.Location = new System.Drawing.Point(1160, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);

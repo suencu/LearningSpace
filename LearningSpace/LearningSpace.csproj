@@ -206,28 +206,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\Resources\minus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Resources\maximize.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\login.png" />
+    <None Include="Properties\Resources\login-a.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\unlock.png" />
+    <None Include="Properties\Resources\password-a.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\icons8-user-48.png" />
+    <None Include="Properties\Resources\confirm password-a.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\icons8-lock-48.png" />
+    <None Include="Properties\Resources\cancel.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Resources\icons8-unlock-48.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

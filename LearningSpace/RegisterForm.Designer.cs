@@ -28,66 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picturePassowrd = new System.Windows.Forms.PictureBox();
-            this.pictureLogin = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.buttonAutorization = new System.Windows.Forms.Button();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.loginBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkPasswordBox = new System.Windows.Forms.TextBox();
-            this.pictureBoxClose = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMinimize = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBoxForPassword = new System.Windows.Forms.CheckBox();
             this.buttonForIgor = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).BeginInit();
+            this.pictureBoxClose = new System.Windows.Forms.PictureBox();
+            this.pictureLogin = new System.Windows.Forms.PictureBox();
+            this.picturePassowrd = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMinimize = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::LearningSpace.Properties.Resources.icons8_unlock_48;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 323);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picturePassowrd
-            // 
-            this.picturePassowrd.BackColor = System.Drawing.Color.Transparent;
-            this.picturePassowrd.BackgroundImage = global::LearningSpace.Properties.Resources.icons8_lock_48;
-            this.picturePassowrd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picturePassowrd.Location = new System.Drawing.Point(49, 235);
-            this.picturePassowrd.Margin = new System.Windows.Forms.Padding(4);
-            this.picturePassowrd.Name = "picturePassowrd";
-            this.picturePassowrd.Size = new System.Drawing.Size(63, 59);
-            this.picturePassowrd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePassowrd.TabIndex = 12;
-            this.picturePassowrd.TabStop = false;
-            // 
-            // pictureLogin
-            // 
-            this.pictureLogin.BackColor = System.Drawing.Color.Transparent;
-            this.pictureLogin.BackgroundImage = global::LearningSpace.Properties.Resources.icons8_user_48;
-            this.pictureLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureLogin.Location = new System.Drawing.Point(49, 159);
-            this.pictureLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureLogin.Name = "pictureLogin";
-            this.pictureLogin.Size = new System.Drawing.Size(63, 59);
-            this.pictureLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureLogin.TabIndex = 11;
-            this.pictureLogin.TabStop = false;
             // 
             // buttonAutorization
             // 
@@ -192,31 +154,6 @@
             this.checkPasswordBox.Enter += new System.EventHandler(this.checkPasswordBox_Enter);
             this.checkPasswordBox.Leave += new System.EventHandler(this.checkPasswordBox_Leave);
             // 
-            // pictureBoxClose
-            // 
-            this.pictureBoxClose.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
-            this.pictureBoxClose.Location = new System.Drawing.Point(660, 0);
-            this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBoxClose.Name = "pictureBoxClose";
-            this.pictureBoxClose.Size = new System.Drawing.Size(40, 30);
-            this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxClose.TabIndex = 27;
-            this.pictureBoxClose.TabStop = false;
-            this.pictureBoxClose.DoubleClick += new System.EventHandler(this.CloseMenu);
-            // 
-            // pictureBoxMinimize
-            // 
-            this.pictureBoxMinimize.Image = global::LearningSpace.Properties.Resources.minus;
-            this.pictureBoxMinimize.Location = new System.Drawing.Point(620, 0);
-            this.pictureBoxMinimize.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBoxMinimize.Name = "pictureBoxMinimize";
-            this.pictureBoxMinimize.Size = new System.Drawing.Size(40, 30);
-            this.pictureBoxMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxMinimize.TabIndex = 26;
-            this.pictureBoxMinimize.TabStop = false;
-            this.pictureBoxMinimize.Click += new System.EventHandler(this.MinimizeAdd);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
@@ -275,6 +212,71 @@
             this.buttonForIgor.UseVisualStyleBackColor = false;
             this.buttonForIgor.Click += new System.EventHandler(this.buttonForIgor_Click);
             // 
+            // pictureBoxClose
+            // 
+            this.pictureBoxClose.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxClose.BackgroundImage")));
+            this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
+            this.pictureBoxClose.Location = new System.Drawing.Point(660, 0);
+            this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxClose.Name = "pictureBoxClose";
+            this.pictureBoxClose.Size = new System.Drawing.Size(40, 30);
+            this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxClose.TabIndex = 27;
+            this.pictureBoxClose.TabStop = false;
+            this.pictureBoxClose.DoubleClick += new System.EventHandler(this.CloseMenu);
+            // 
+            // pictureLogin
+            // 
+            this.pictureLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pictureLogin.BackgroundImage = global::LearningSpace.Properties.Resources.login_a;
+            this.pictureLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureLogin.Location = new System.Drawing.Point(49, 159);
+            this.pictureLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureLogin.Name = "pictureLogin";
+            this.pictureLogin.Size = new System.Drawing.Size(63, 59);
+            this.pictureLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureLogin.TabIndex = 11;
+            this.pictureLogin.TabStop = false;
+            // 
+            // picturePassowrd
+            // 
+            this.picturePassowrd.BackColor = System.Drawing.Color.Transparent;
+            this.picturePassowrd.BackgroundImage = global::LearningSpace.Properties.Resources.password_a;
+            this.picturePassowrd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picturePassowrd.Location = new System.Drawing.Point(49, 235);
+            this.picturePassowrd.Margin = new System.Windows.Forms.Padding(4);
+            this.picturePassowrd.Name = "picturePassowrd";
+            this.picturePassowrd.Size = new System.Drawing.Size(63, 59);
+            this.picturePassowrd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePassowrd.TabIndex = 12;
+            this.picturePassowrd.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(49, 323);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxMinimize
+            // 
+            this.pictureBoxMinimize.Image = global::LearningSpace.Properties.Resources.minus;
+            this.pictureBoxMinimize.Location = new System.Drawing.Point(620, 0);
+            this.pictureBoxMinimize.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxMinimize.Name = "pictureBoxMinimize";
+            this.pictureBoxMinimize.Size = new System.Drawing.Size(40, 30);
+            this.pictureBoxMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMinimize.TabIndex = 26;
+            this.pictureBoxMinimize.TabStop = false;
+            this.pictureBoxMinimize.Click += new System.EventHandler(this.MinimizeAdd);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,13 +293,13 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePassowrd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).EndInit();
             this.ResumeLayout(false);
 
         }

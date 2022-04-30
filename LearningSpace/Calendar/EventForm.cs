@@ -29,8 +29,9 @@ namespace LearningSpace
         #region Работа с MySql
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            DataBase dataBase = new DataBase(); //Делаем экземпляр базы данных
-            MySqlCommand command = new MySqlCommand("INSERT INTO `tbl` (`event` , `date` ) VALUES (@event , @date )", dataBase.GetMySqlConnection());
+
+            DataBase dataBase = new DataBase();
+            MySqlCommand command = new MySqlCommand("INSERT INTO `calendar` (`event` , `date` ) VALUES (@event , @date )", dataBase.GetMySqlConnection());
             command.Parameters.Add("@date", MySqlDbType.VarChar).Value = textDate.Text;
             command.Parameters.Add("@event", MySqlDbType.VarChar).Value = textEvent.Text;
 

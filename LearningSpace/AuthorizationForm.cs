@@ -51,14 +51,14 @@ namespace LearningSpace
             DataTable dataTable = new DataTable();
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
 
+            //для передачи LOGIN в другие файлы , так как он всегда уникальный 
+            login_user = loginBox.Text;
+
             //указываем команду которая относится к базе данных
             MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND  `password` = @uP", dataBase.GetMySqlConnection());
             //вместо заглушек указываем переменные
             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginBox.Text;
             command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passwordBox.Text;
-
-            loginBox.Text = loginBox.Text;
-
 
             //выбираем коману и выполняем 
             dataAdapter.SelectCommand = command;

@@ -14,13 +14,11 @@ namespace LearningSpace
 {
     public partial class EventForm : Form
     {
-        string login_user;
-
         #region EventForm
         public EventForm()
         {
             InitializeComponent();
-            textBoxCheck.Text = AuthorizationForm.login_user;
+            textBoxCheck.Text = "Пользователь : " + AuthorizationForm.login_user;
         }
 
         
@@ -37,6 +35,8 @@ namespace LearningSpace
         private void buttonSave_Click(object sender, EventArgs e)
         {
             DataBase dataBase = new DataBase();
+            //сохраняю переменную hours для дальнейшей работы в Graph
+            UInt32 hours = Convert.ToUInt32(BOXperformanceEvaluation.SelectedItem.ToString());
 
             //проверка на null textBOX_Event , чтобы не сохранять пустое событие 
             if (textEvent.Text == null)
@@ -45,16 +45,15 @@ namespace LearningSpace
                 return;
             }
 
-            //MySqlCommand command = new MySqlCommand("INSERT INTO `calendar` (`event` , `date` ) VALUES (@event , @date )", dataBase.GetMySqlConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `calendar` (`event`, `date`, `hours`, `login_user`) VALUES (@event, @date, @hours ,@login_user)", dataBase.GetMySqlConnection());
 
-            //я доделаю тут
-            MySqlCommand command = new MySqlCommand("INSERT INTO `calendar` (`event`, `date`, `login_user`) VALUES (@event, @date, @login_user)" , dataBase.GetMySqlConnection());
             try
             {
                 dataBase.OpenConnection();
-                command.Parameters.Add("@date", MySqlDbType.VarChar).Value = textDate.Text;
                 command.Parameters.Add("@event", MySqlDbType.VarChar).Value = textEvent.Text;
-                command.Parameters.Add("@login_user", MySqlDbType.VarChar).Value = AuthorizationForm.login_user; //сюда надо передать LOGIn юзера 
+                command.Parameters.Add("@date", MySqlDbType.VarChar).Value = textDate.Text;
+                command.Parameters.Add("@hours", MySqlDbType.UInt32).Value = hours; 
+                command.Parameters.Add("@login_user", MySqlDbType.VarChar).Value = AuthorizationForm.login_user;
 
                 if (command.ExecuteNonQuery() == 1) //Если все ок, то сохраняем 
                 {

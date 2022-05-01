@@ -142,11 +142,12 @@
             "3",
             "4",
             "5"});
-            this.BOXperformanceEvaluation.Location = new System.Drawing.Point(473, 166);
+            this.BOXperformanceEvaluation.Location = new System.Drawing.Point(469, 166);
             this.BOXperformanceEvaluation.MaxDropDownItems = 5;
             this.BOXperformanceEvaluation.Name = "BOXperformanceEvaluation";
-            this.BOXperformanceEvaluation.Size = new System.Drawing.Size(69, 31);
+            this.BOXperformanceEvaluation.Size = new System.Drawing.Size(96, 31);
             this.BOXperformanceEvaluation.TabIndex = 18;
+            this.BOXperformanceEvaluation.Text = "Hours";
             // 
             // EventForm
             // 

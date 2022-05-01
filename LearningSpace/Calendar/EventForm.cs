@@ -47,6 +47,7 @@ namespace LearningSpace
 
             //MySqlCommand command = new MySqlCommand("INSERT INTO `calendar` (`event` , `date` ) VALUES (@event , @date )", dataBase.GetMySqlConnection());
 
+            //я доделаю тут
             MySqlCommand command = new MySqlCommand("INSERT INTO `calendar` (`event`, `date`, `login_user`) VALUES (@event, @date, @login_user)" , dataBase.GetMySqlConnection());
             try
             {

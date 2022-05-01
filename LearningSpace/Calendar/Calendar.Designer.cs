@@ -52,7 +52,7 @@
             this.buttonBackToMenu.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
             this.buttonBackToMenu.FlatAppearance.BorderSize = 0;
             this.buttonBackToMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBackToMenu.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold);
+            this.buttonBackToMenu.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonBackToMenu.ForeColor = System.Drawing.SystemColors.Info;
             this.buttonBackToMenu.Location = new System.Drawing.Point(16, 603);
             this.buttonBackToMenu.Name = "buttonBackToMenu";

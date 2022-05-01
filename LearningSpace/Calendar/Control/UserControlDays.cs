@@ -14,6 +14,7 @@ namespace LearningSpace
     {
         #region Переменные 
         public static string static_day;
+
         #endregion
         #region UserControlDays
         public UserControlDays()

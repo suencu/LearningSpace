@@ -22,7 +22,7 @@ namespace LearningSpace
         Thread th;
         #endregion
         #region Окно календаря 
-        public Calendar()
+        public Calendar(  )
         {
             InitializeComponent();
         }

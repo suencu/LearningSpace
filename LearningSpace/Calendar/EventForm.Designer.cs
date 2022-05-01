@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
+            this.textBoxCheck = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,9 +45,10 @@
             this.textDate.Enabled = false;
             this.textDate.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
             this.textDate.ForeColor = System.Drawing.SystemColors.Info;
-            this.textDate.Location = new System.Drawing.Point(82, 63);
+            this.textDate.Location = new System.Drawing.Point(109, 78);
+            this.textDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textDate.Name = "textDate";
-            this.textDate.Size = new System.Drawing.Size(325, 25);
+            this.textDate.Size = new System.Drawing.Size(433, 31);
             this.textDate.TabIndex = 0;
             // 
             // textEvent
@@ -55,9 +57,10 @@
             this.textEvent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textEvent.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold);
             this.textEvent.ForeColor = System.Drawing.SystemColors.Info;
-            this.textEvent.Location = new System.Drawing.Point(82, 191);
+            this.textEvent.Location = new System.Drawing.Point(109, 235);
+            this.textEvent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEvent.Name = "textEvent";
-            this.textEvent.Size = new System.Drawing.Size(325, 25);
+            this.textEvent.Size = new System.Drawing.Size(433, 31);
             this.textEvent.TabIndex = 1;
             // 
             // label1
@@ -65,9 +68,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(82, 41);
+            this.label1.Location = new System.Drawing.Point(109, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 19);
+            this.label1.Size = new System.Drawing.Size(54, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Date";
             // 
@@ -76,9 +80,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(82, 169);
+            this.label2.Location = new System.Drawing.Point(109, 208);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 19);
+            this.label2.Size = new System.Drawing.Size(65, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Event";
             // 
@@ -90,9 +95,10 @@
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSave.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonSave.Location = new System.Drawing.Point(387, 261);
+            this.buttonSave.Location = new System.Drawing.Point(516, 321);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(123, 45);
+            this.buttonSave.Size = new System.Drawing.Size(164, 55);
             this.buttonSave.TabIndex = 3;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = false;
@@ -103,21 +109,30 @@
             this.pictureBoxClose.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxClose.BackgroundImage = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.cancel;
-            this.pictureBoxClose.Location = new System.Drawing.Point(503, 0);
+            this.pictureBoxClose.Location = new System.Drawing.Point(671, 0);
             this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxClose.Name = "pictureBoxClose";
-            this.pictureBoxClose.Size = new System.Drawing.Size(30, 24);
+            this.pictureBoxClose.Size = new System.Drawing.Size(40, 30);
             this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxClose.TabIndex = 16;
             this.pictureBoxClose.TabStop = false;
             this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_);
             // 
+            // textBoxCheck
+            // 
+            this.textBoxCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCheck.Location = new System.Drawing.Point(183, 150);
+            this.textBoxCheck.Name = "textBoxCheck";
+            this.textBoxCheck.Size = new System.Drawing.Size(295, 34);
+            this.textBoxCheck.TabIndex = 17;
+            // 
             // EventForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(102)))), ((int)(((byte)(121)))));
-            this.ClientSize = new System.Drawing.Size(533, 318);
+            this.ClientSize = new System.Drawing.Size(711, 391);
+            this.Controls.Add(this.textBoxCheck);
             this.Controls.Add(this.pictureBoxClose);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label2);
@@ -125,6 +140,7 @@
             this.Controls.Add(this.textEvent);
             this.Controls.Add(this.textDate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EventForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EventForm";
@@ -143,5 +159,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.PictureBox pictureBoxClose;
+        private System.Windows.Forms.TextBox textBoxCheck;
     }
 }

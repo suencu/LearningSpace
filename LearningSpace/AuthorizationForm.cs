@@ -25,6 +25,9 @@ namespace LearningSpace
         Color TextBoxColor;
         string HexColorForFontTextEror= "#ce2d30";
         Color TextBoxColorEror;
+
+        public static string login_user;
+
         #endregion
 
         public AuthorizationForm()
@@ -35,6 +38,7 @@ namespace LearningSpace
             //установка цвета
             TextBoxColor = ColorTranslator.FromHtml(HexColorForFontText);
             TextBoxColorEror = ColorTranslator.FromHtml(HexColorForFontTextEror);
+
         }
 
         #region -- Нажатие на объекты --
@@ -42,9 +46,6 @@ namespace LearningSpace
         //button  
         private void GoToMenu(object sender, EventArgs e)
         {
-            //получаем данные пользователя 
-            string loginUser = loginBox.Text;
-            string passwordUser = passwordBox.Text;
 
             DataBase dataBase = new DataBase();
             DataTable dataTable = new DataTable();
@@ -53,8 +54,11 @@ namespace LearningSpace
             //указываем команду которая относится к базе данных
             MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND  `password` = @uP", dataBase.GetMySqlConnection());
             //вместо заглушек указываем переменные
-            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
-            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passwordUser;
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginBox.Text;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passwordBox.Text;
+
+            loginBox.Text = loginBox.Text;
+
 
             //выбираем коману и выполняем 
             dataAdapter.SelectCommand = command;
@@ -75,7 +79,6 @@ namespace LearningSpace
                 MessageBox.Show("You're not in the database. ");
                 UpdateAuthorizationForm();
             }
-
 
         }
         private void GoToRegister(object sender, EventArgs e)

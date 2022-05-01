@@ -72,7 +72,7 @@ namespace LearningSpace
             {
                 MessageBox.Show("Вы зашли в систему");
 
-                thread = new Thread(OpenMenuForm);
+                thread = new Thread(OpenAuthorizationForm);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
                 Close();
@@ -80,6 +80,8 @@ namespace LearningSpace
             else
             {
                 MessageBox.Show("Некоректрые данные");
+                UpdateRegisterForm();
+                return;
             }
 
             dataBase.CloseConnection();

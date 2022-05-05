@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonMaximaze = new System.Windows.Forms.Button();
-            this.buttonTestMenu = new System.Windows.Forms.Button();
+            this.buttonEvent = new System.Windows.Forms.Button();
             this.buttonCalender = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
             this.panel1.Controls.Add(this.buttonMaximaze);
-            this.panel1.Controls.Add(this.buttonTestMenu);
+            this.panel1.Controls.Add(this.buttonEvent);
             this.panel1.Controls.Add(this.buttonCalender);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -81,23 +81,23 @@
             this.buttonMaximaze.TabIndex = 7;
             this.buttonMaximaze.UseVisualStyleBackColor = true;
             // 
-            // buttonTestMenu
+            // buttonEvent
             // 
-            this.buttonTestMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonTestMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(115)))), ((int)(((byte)(57)))));
-            this.buttonTestMenu.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonTestMenu.FlatAppearance.BorderSize = 0;
-            this.buttonTestMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTestMenu.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTestMenu.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonTestMenu.Location = new System.Drawing.Point(656, 303);
-            this.buttonTestMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonTestMenu.Name = "buttonTestMenu";
-            this.buttonTestMenu.Size = new System.Drawing.Size(264, 270);
-            this.buttonTestMenu.TabIndex = 4;
-            this.buttonTestMenu.Text = "TestMenu";
-            this.buttonTestMenu.UseVisualStyleBackColor = false;
-            this.buttonTestMenu.Click += new System.EventHandler(this.buttonTestMenu_Click);
+            this.buttonEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEvent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(115)))), ((int)(((byte)(57)))));
+            this.buttonEvent.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonEvent.FlatAppearance.BorderSize = 0;
+            this.buttonEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEvent.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEvent.ForeColor = System.Drawing.SystemColors.Info;
+            this.buttonEvent.Location = new System.Drawing.Point(656, 303);
+            this.buttonEvent.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonEvent.Name = "buttonEvent";
+            this.buttonEvent.Size = new System.Drawing.Size(264, 270);
+            this.buttonEvent.TabIndex = 4;
+            this.buttonEvent.Text = "TestMenu";
+            this.buttonEvent.UseVisualStyleBackColor = false;
+            this.buttonEvent.Click += new System.EventHandler(this.buttonTestMenu_Click);
             // 
             // buttonCalender
             // 
@@ -262,7 +262,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonTestMenu;
+        private System.Windows.Forms.Button buttonEvent;
         private System.Windows.Forms.Button buttonCalender;
         private System.Windows.Forms.Button buttonMaximaze;
         private System.Windows.Forms.Button button3;

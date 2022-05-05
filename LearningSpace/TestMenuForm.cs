@@ -19,8 +19,7 @@ namespace LearningSpace
         {
             InitializeComponent();
             customizeDesing();
-
-            
+            Animator.Start();
         }
 
         private void customizeDesing()

@@ -51,10 +51,12 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelChildBottom = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.yt_Button1 = new yt_DesignUI.yt_Button();
             this.panelSideMenu.SuspendLayout();
             this.panelSUB333.SuspendLayout();
             this.panelSUB222.SuspendLayout();
             this.panelSUB111.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -409,11 +411,37 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.yt_Button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(350, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1032, 603);
             this.panel3.TabIndex = 3;
+            // 
+            // yt_Button1
+            // 
+            this.yt_Button1.BackColor = System.Drawing.Color.Tomato;
+            this.yt_Button1.BackColorAdditional = System.Drawing.Color.Gray;
+            this.yt_Button1.BackColorGradientEnabled = false;
+            this.yt_Button1.BackColorGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.yt_Button1.BorderColor = System.Drawing.Color.Tomato;
+            this.yt_Button1.BorderColorEnabled = false;
+            this.yt_Button1.BorderColorOnHover = System.Drawing.Color.Tomato;
+            this.yt_Button1.BorderColorOnHoverEnabled = false;
+            this.yt_Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.yt_Button1.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.yt_Button1.ForeColor = System.Drawing.Color.White;
+            this.yt_Button1.Location = new System.Drawing.Point(239, 267);
+            this.yt_Button1.Name = "yt_Button1";
+            this.yt_Button1.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.yt_Button1.RoundingEnable = true;
+            this.yt_Button1.Size = new System.Drawing.Size(100, 30);
+            this.yt_Button1.TabIndex = 0;
+            this.yt_Button1.Text = "yt_Button1";
+            this.yt_Button1.TextHover = "WOW";
+            this.yt_Button1.UseDownPressEffectOnClick = true;
+            this.yt_Button1.UseRippleEffect = true;
+            this.yt_Button1.UseZoomEffectOnHover = true;
             // 
             // TestMenuForm
             // 
@@ -436,6 +464,7 @@
             this.panelSUB333.ResumeLayout(false);
             this.panelSUB222.ResumeLayout(false);
             this.panelSUB111.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -465,5 +494,6 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelChildBottom;
         private System.Windows.Forms.Panel panel3;
+        private yt_DesignUI.yt_Button yt_Button1;
     }
 }

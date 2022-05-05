@@ -274,23 +274,79 @@ namespace LearningSpace
             startPoint = new Point(e.X, e.Y);
         }
         #endregion
-        
+
         /// <summary>
         /// 1)Проверка на null всех полей 
         /// 2)Проверка на равенство password и ConfirmPassword
         /// 3)Проверка на существование Login в DataBase
+        /// 4)Login и Password - иогут содержать только символы "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*_+-=?" + englAlphUpper
+        /// 6)Login - может содержвать min 4 символа , Password - может содержавть min 8 символов (все без пробелов)
         /// </summary>
         /// <returns>TRUE: если что-то введено не так</returns>
         public bool checkEnteredDate()
         {
             if (loginBox.Text == null || passwordBox.Text == null || checkPasswordBox.Text == null || loginBox.Text == "Login" || passwordBox.Text == "Password" || checkPasswordBox.Text == "Confirm password")
             {
+                MessageBox.Show("Пустые данные");
                 return true;
             }
-            else if (passwordBox.Text != checkPasswordBox.Text)
+
+            if (passwordBox.Text != checkPasswordBox.Text)
             {
+                MessageBox.Show("Пароли не похожи");
                 return true;
             }
+
+            int index = 0;
+            while (index <= loginBox.Text.Length)
+            {
+                if (loginBox.Text.IndexOf(' ', index) > 0)
+                {
+                    MessageBox.Show("Есть пробелы");
+                    return true;
+                }
+
+                if (passwordBox.Text.IndexOf(' ', index) > 0)
+                {
+                    MessageBox.Show("Есть пробелы");
+                    return true;
+                }
+                index++;
+            }
+
+            string englAlphUpper = "abcdefghijklmnopqrstuvwxyz".ToUpper();
+            string englishSymbol = ("abcdefghijklmnopqrstuvwxyz" + englAlphUpper + "1234567890 " + "!@#$%^&*_+-=?");
+
+            int countOFLogin = 0;
+            int countOFPassword = 0;
+
+            for (int i = 0; i < loginBox.Text.Length; i++)
+            {
+                for (int j = 0; j < englishSymbol.Length; j++)
+                {
+                    if (loginBox.Text[i] == englishSymbol[j])
+                    {
+                        countOFLogin++;
+                    }
+                }
+            }
+            for (int i = 0; i < passwordBox.Text.Length; i++)
+            {
+                for (int j = 0; j < englishSymbol.Length; j++)
+                {
+                    if (passwordBox.Text[i] == englishSymbol[j])
+                    {
+                        countOFPassword++;
+                    }
+                }
+            }
+
+            if (!(countOFLogin == loginBox.Text.Length && countOFPassword == passwordBox.Text.Length))
+            {
+                MessageBox.Show("Есть некоректные символы");
+                return true;
+            }
+
 
             MySqlCommand commandPullOutLogin = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @login", dataBase.GetMySqlConnection());
             commandPullOutLogin.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginBox.Text;

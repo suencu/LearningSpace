@@ -56,6 +56,13 @@ namespace LearningSpace
             th.Start();
             Close();
         }
+        private void buttonWeather_Click(object sender, EventArgs e)
+        {
+            th = new Thread(OpenWeatherForm);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+            Close();
+        }
 
         //picterBox
         private void pictureBoxMinimize_Click(object sender, EventArgs e)
@@ -78,12 +85,15 @@ namespace LearningSpace
         {
             Application.Run(new TestMenuForm());
         }
-
         private void OpenNewNodes()
         {
             Application.Run(new Calendar());
         }
-        #endregion  
+        private void OpenWeatherForm()
+        {
+            Application.Run(new WeatherForm());
+        }
+        #endregion
 
         #region -- Движение формой --
         //panel
@@ -126,5 +136,6 @@ namespace LearningSpace
         }
         #endregion
 
+      
     }
 }

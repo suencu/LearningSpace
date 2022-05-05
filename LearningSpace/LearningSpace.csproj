@@ -37,7 +37,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.29\Assemblies\v4.8\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationFramework" />
+
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -65,6 +68,11 @@
     <Compile Include="Calendar\EventForm.Designer.cs">
       <DependentUpon>EventForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpenWeather\clouds.cs" />
+    <Compile Include="OpenWeather\coord.cs" />
+    <Compile Include="OpenWeather\main.cs" />
+    <Compile Include="OpenWeather\sys.cs" />
+    <Compile Include="OpenWeather\OpenWeather.cs" />
     <Compile Include="Graph.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,9 +134,16 @@
     <Compile Include="Calendar\Control\UserControlDays.Designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Calendar\CreateEventForm.resx">
-      <DependentUpon>CreateEventForm.cs</DependentUpon>
-    </EmbeddedResource>
+
+    <Compile Include="OpenWeather\weather.cs" />
+    <Compile Include="OpenWeather\wind.cs" />
+    <Compile Include="WeatherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeatherForm.Designer.cs">
+      <DependentUpon>WeatherForm.cs</DependentUpon>
+    </Compile>
+
     <EmbeddedResource Include="Calendar\EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +217,10 @@
     <EmbeddedResource Include="Calendar\Control\UserControlDays.resx">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WeatherForm.resx">
+      <DependentUpon>WeatherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

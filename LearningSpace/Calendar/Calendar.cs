@@ -21,12 +21,14 @@ namespace LearningSpace
         public static string static_month, static_year;
         Thread th;
         #endregion
+
         #region Окно календаря 
         public Calendar(  )
         {
             InitializeComponent();
         }
         #endregion
+
         #region Кнопка "Назад в меню"
         private void buttonBackToMenu_Click(object sender, EventArgs e)
         {
@@ -40,6 +42,7 @@ namespace LearningSpace
             Application.Run(new MenuForm());
         }
         #endregion
+
         #region Кнопки "Закрыть,свернуть"
         private void pictureBoxClose_DoubleClick(object sender, EventArgs e)
         {
@@ -50,6 +53,7 @@ namespace LearningSpace
             this.WindowState = FormWindowState.Minimized;
         }
         #endregion
+
         #region Основная логика календаря
         private void NewNodes_Load(object sender, EventArgs e)
         {
@@ -67,6 +71,7 @@ namespace LearningSpace
             DisplayCalendar(month, year);//Отображаем дни 
         }
         #endregion
+
         #region Кнопки управления "Следующий и предыдущий месяц" 
         private void buttonPrevious_Click(object sender, EventArgs e)
         {
@@ -93,6 +98,7 @@ namespace LearningSpace
             DisplayCalendar(month, year);//Отображаем дни
         }
         #endregion
+
         #region Отображаем дни, меняем месяца,года 
         private void DisplayCalendar(int _month,int _year)
         {

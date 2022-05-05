@@ -32,7 +32,7 @@
             this.buttonMaximaze = new System.Windows.Forms.Button();
             this.buttonEvent = new System.Windows.Forms.Button();
             this.buttonCalender = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonWeather = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
@@ -57,13 +57,13 @@
             this.panel1.Controls.Add(this.buttonMaximaze);
             this.panel1.Controls.Add(this.buttonEvent);
             this.panel1.Controls.Add(this.buttonCalender);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.buttonWeather);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(0, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 27);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 615);
+            this.panel1.Size = new System.Drawing.Size(900, 500);
             this.panel1.TabIndex = 4;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -74,30 +74,31 @@
             this.buttonMaximaze.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMaximaze.BackgroundImage = global::LearningSpace.Properties.Resources.maximize;
             this.buttonMaximaze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonMaximaze.Location = new System.Drawing.Point(1115, -224);
-            this.buttonMaximaze.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonMaximaze.Location = new System.Drawing.Point(836, -182);
+            this.buttonMaximaze.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonMaximaze.Name = "buttonMaximaze";
-            this.buttonMaximaze.Size = new System.Drawing.Size(45, 33);
+            this.buttonMaximaze.Size = new System.Drawing.Size(34, 27);
             this.buttonMaximaze.TabIndex = 7;
             this.buttonMaximaze.UseVisualStyleBackColor = true;
             // 
             // buttonEvent
             // 
-            this.buttonEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEvent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(115)))), ((int)(((byte)(57)))));
-            this.buttonEvent.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonEvent.FlatAppearance.BorderSize = 0;
-            this.buttonEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEvent.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEvent.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonEvent.Location = new System.Drawing.Point(656, 303);
-            this.buttonEvent.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonEvent.Name = "buttonEvent";
-            this.buttonEvent.Size = new System.Drawing.Size(264, 270);
-            this.buttonEvent.TabIndex = 4;
-            this.buttonEvent.Text = "TestMenu";
-            this.buttonEvent.UseVisualStyleBackColor = false;
-            this.buttonEvent.Click += new System.EventHandler(this.buttonTestMenu_Click);
+
+            this.buttonTestMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTestMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(115)))), ((int)(((byte)(57)))));
+            this.buttonTestMenu.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonTestMenu.FlatAppearance.BorderSize = 0;
+            this.buttonTestMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTestMenu.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTestMenu.ForeColor = System.Drawing.SystemColors.Info;
+            this.buttonTestMenu.Location = new System.Drawing.Point(492, 246);
+            this.buttonTestMenu.Name = "buttonTestMenu";
+            this.buttonTestMenu.Size = new System.Drawing.Size(198, 219);
+            this.buttonTestMenu.TabIndex = 4;
+            this.buttonTestMenu.Text = "TestMenu";
+            this.buttonTestMenu.UseVisualStyleBackColor = false;
+            this.buttonTestMenu.Click += new System.EventHandler(this.buttonTestMenu_Click);
+
             // 
             // buttonCalender
             // 
@@ -108,31 +109,30 @@
             this.buttonCalender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCalender.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCalender.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonCalender.Location = new System.Drawing.Point(277, 303);
-            this.buttonCalender.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCalender.Location = new System.Drawing.Point(208, 246);
             this.buttonCalender.Name = "buttonCalender";
-            this.buttonCalender.Size = new System.Drawing.Size(264, 270);
+            this.buttonCalender.Size = new System.Drawing.Size(198, 219);
             this.buttonCalender.TabIndex = 3;
             this.buttonCalender.Text = "Calender";
             this.buttonCalender.UseVisualStyleBackColor = false;
             this.buttonCalender.Click += new System.EventHandler(this.buttonCalender_Click);
             // 
-            // button3
+            // buttonWeather
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(75)))), ((int)(((byte)(201)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Info;
-            this.button3.Location = new System.Drawing.Point(856, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(264, 270);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Weather";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonWeather.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonWeather.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(75)))), ((int)(((byte)(201)))));
+            this.buttonWeather.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonWeather.FlatAppearance.BorderSize = 0;
+            this.buttonWeather.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWeather.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonWeather.ForeColor = System.Drawing.SystemColors.Info;
+            this.buttonWeather.Location = new System.Drawing.Point(642, 3);
+            this.buttonWeather.Name = "buttonWeather";
+            this.buttonWeather.Size = new System.Drawing.Size(198, 219);
+            this.buttonWeather.TabIndex = 2;
+            this.buttonWeather.Text = "Weather";
+            this.buttonWeather.UseVisualStyleBackColor = false;
+            this.buttonWeather.Click += new System.EventHandler(this.buttonWeather_Click);
             // 
             // button2
             // 
@@ -143,10 +143,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.Info;
-            this.button2.Location = new System.Drawing.Point(465, 4);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(349, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(264, 270);
+            this.button2.Size = new System.Drawing.Size(198, 219);
             this.button2.TabIndex = 1;
             this.button2.Text = "Graph";
             this.button2.UseVisualStyleBackColor = false;
@@ -159,10 +158,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(84, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(63, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(264, 270);
+            this.button1.Size = new System.Drawing.Size(198, 219);
             this.button1.TabIndex = 0;
             this.button1.Text = "Nodes";
             this.button1.UseVisualStyleBackColor = false;
@@ -172,10 +170,10 @@
             // 
             this.pictureBoxClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
             this.pictureBoxClose.Image = global::LearningSpace.Properties.Resources.minus;
-            this.pictureBoxClose.Location = new System.Drawing.Point(1547, 0);
+            this.pictureBoxClose.Location = new System.Drawing.Point(1160, 0);
             this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxClose.Name = "pictureBoxClose";
-            this.pictureBoxClose.Size = new System.Drawing.Size(53, 37);
+            this.pictureBoxClose.Size = new System.Drawing.Size(40, 30);
             this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxClose.TabIndex = 10;
             this.pictureBoxClose.TabStop = false;
@@ -184,10 +182,10 @@
             // pictureBoxMinimize
             // 
             this.pictureBoxMinimize.Image = global::LearningSpace.Properties.Resources.minus;
-            this.pictureBoxMinimize.Location = new System.Drawing.Point(1493, 0);
+            this.pictureBoxMinimize.Location = new System.Drawing.Point(1120, 0);
             this.pictureBoxMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxMinimize.Name = "pictureBoxMinimize";
-            this.pictureBoxMinimize.Size = new System.Drawing.Size(53, 37);
+            this.pictureBoxMinimize.Size = new System.Drawing.Size(40, 30);
             this.pictureBoxMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMinimize.TabIndex = 9;
             this.pictureBoxMinimize.TabStop = false;
@@ -196,10 +194,10 @@
             // pictureBoxMaximaze
             // 
             this.pictureBoxMaximaze.Image = global::LearningSpace.Properties.Resources.maximize;
-            this.pictureBoxMaximaze.Location = new System.Drawing.Point(1440, 0);
+            this.pictureBoxMaximaze.Location = new System.Drawing.Point(1080, 0);
             this.pictureBoxMaximaze.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxMaximaze.Name = "pictureBoxMaximaze";
-            this.pictureBoxMaximaze.Size = new System.Drawing.Size(53, 37);
+            this.pictureBoxMaximaze.Size = new System.Drawing.Size(40, 30);
             this.pictureBoxMaximaze.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMaximaze.TabIndex = 8;
             this.pictureBoxMaximaze.TabStop = false;
@@ -209,10 +207,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
             this.pictureBox1.BackgroundImage = global::LearningSpace.Properties.Resources.cancel;
             this.pictureBox1.Image = global::LearningSpace.Properties.Resources.cancel;
-            this.pictureBox1.Location = new System.Drawing.Point(1160, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(870, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -221,10 +219,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::LearningSpace.Properties.Resources.minus;
-            this.pictureBox2.Location = new System.Drawing.Point(1120, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(840, 1);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
@@ -232,10 +230,10 @@
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.ClientSize = new System.Drawing.Size(900, 528);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBoxClose);
@@ -243,7 +241,7 @@
             this.Controls.Add(this.pictureBoxMaximaze);
             this.Controls.Add(this.pictureBoxMinimize);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenu";
@@ -265,7 +263,7 @@
         private System.Windows.Forms.Button buttonEvent;
         private System.Windows.Forms.Button buttonCalender;
         private System.Windows.Forms.Button buttonMaximaze;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonWeather;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBoxClose;

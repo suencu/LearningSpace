@@ -22,6 +22,7 @@ namespace LearningSpace
         Color UserControlColor;
       
         #endregion
+
         #region UserControlDays
         public UserControlDays()
         {
@@ -39,12 +40,14 @@ namespace LearningSpace
             displayEvent();
         }
         #endregion
+
         #region Выводим значение в календать 
         public void days(int numDay) //numDay берем из calendar(в конце логики)
         {
             labelDays.Text = numDay + ""; //Отображаем дни в месяце 
         }
         #endregion
+
         #region Клик по дню 
         private void UserControlDays_Click(object sender, EventArgs e)
         {

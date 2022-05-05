@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningSpace.WeatherClasses
+namespace LearningSpace.OpenWeather
 {
-    class CoordClass
+    class wind
     {
         #region --Переменные--
-        public double lon;
+        public double speed { get; set; }
 
-        public double lat;
+        public double deg { get; set; }
+
+        public double gust { get; set; }
         #endregion
     }
 }

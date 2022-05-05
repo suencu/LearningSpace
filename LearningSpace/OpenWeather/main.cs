@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningSpace.WeatherClasses
+namespace LearningSpace.OpenWeather
 {
-    class MainClass
+    class main
     {
         #region --Переменные--
         private double _temp;
@@ -37,7 +37,11 @@ namespace LearningSpace.WeatherClasses
         }
 
 
-        public double humidity;
+
+        public double humidity { get; set; }
+        
+        
+
 
         private double _temp_min;
         public double temp_min

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 using System.Net;
 using Newtonsoft.Json;
 using System.IO;
+using System.Threading;
 
 namespace LearningSpace
 {
     public partial class WeatherForm : Form
     {
+        #region --Переменные--
+        Thread th;
+        #endregion
+
         #region  --WeatherForm--
         public WeatherForm()
         {
@@ -50,9 +55,44 @@ namespace LearningSpace
                 }
             }
             response.Close();
-            WeatherTextBox.Text = answer; //Передаем строку в textBox
+            //WeatherTextBox.Text = answer; //Передаем строку в textBox
+
+            OpenWeather.OpenWeather OW = JsonConvert.DeserializeObject<OpenWeather.OpenWeather>(answer); //Конверт для удобства 
+
+            panelПогода.BackgroundImage = OW.weather[0].Icon; //Иконка погоды
+
+            label1.Text = OW.weather[0].main;
+
+            label2.Text = OW.weather[0].description;
+
+            label3.Text = "Средняя температура(°C): " + OW.main.temp.ToString("0.##");
+
+            label6.Text = "Скорость (м/с): " + OW.wind.speed.ToString();
+
+            label7.Text = "Направление °: " + OW.wind.deg.ToString();
+
+            label4.Text = "Влажность (%): " + OW.main.humidity.ToString();
+
+            label5.Text = "Давление (мм): " + ((int) OW.main.pressure).ToString();
         }
-            #endregion
+
+        #endregion
+
+
+
+        #region Кнопка "Назад в меню"
+        private void backToMenuWeather(object sender, EventArgs e)
+        {
+            th = new Thread(openBackMenu);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+            Close();
+        }
+        private void openBackMenu()
+        {
+            Application.Run(new MenuForm());
+        }
+        #endregion
         
     }
 }

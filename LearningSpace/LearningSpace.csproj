@@ -61,9 +61,11 @@
     <Compile Include="Calendar\EventForm.Designer.cs">
       <DependentUpon>EventForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WeatherClasses\CoordClass.cs" />
-    <Compile Include="WeatherClasses\MainClass.cs" />
-    <Compile Include="WeatherClasses\WeatherClass.cs" />
+    <Compile Include="OpenWeather\clouds.cs" />
+    <Compile Include="OpenWeather\coord.cs" />
+    <Compile Include="OpenWeather\main.cs" />
+    <Compile Include="OpenWeather\sys.cs" />
+    <Compile Include="OpenWeather\OpenWeather.cs" />
     <Compile Include="Graph.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +127,8 @@
     <Compile Include="Calendar\Control\UserControlDays.Designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
-    <Compile Include="WeatherClasses\weatherClass1.cs" />
+    <Compile Include="OpenWeather\weather.cs" />
+    <Compile Include="OpenWeather\wind.cs" />
     <Compile Include="WeatherForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -42,13 +42,7 @@ namespace LearningSpace
             Close();
 
         }
-        private void buttonTestMenu_Click(object sender, EventArgs e)
-        {
-            th = new Thread(OpenTestMenu);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
-            Close();
-        }
+      
         private void buttonCalender_Click(object sender, EventArgs e)
         {
             th = new Thread(OpenNewNodes);
@@ -81,10 +75,7 @@ namespace LearningSpace
         {
             Application.Run(new Nodes());
         }
-        private void OpenTestMenu()
-        {
-            Application.Run(new TestMenuForm());
-        }
+   
         private void OpenNewNodes()
         {
             Application.Run(new Calendar());

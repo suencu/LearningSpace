@@ -37,7 +37,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.29\Assemblies\v4.8\MySql.Data.dll</HintPath>
     </Reference>
-
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -116,12 +115,6 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestMenuForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestMenuForm.Designer.cs">
-      <DependentUpon>TestMenuForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Calendar\Control\UserControlBlank.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,7 +127,6 @@
     <Compile Include="Calendar\Control\UserControlDays.Designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
-
     <Compile Include="OpenWeather\weather.cs" />
     <Compile Include="OpenWeather\wind.cs" />
     <Compile Include="WeatherForm.cs">
@@ -143,7 +135,6 @@
     <Compile Include="WeatherForm.Designer.cs">
       <DependentUpon>WeatherForm.cs</DependentUpon>
     </Compile>
-
     <EmbeddedResource Include="Calendar\EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,9 +198,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestMenuForm.resx">
-      <DependentUpon>TestMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calendar\Control\UserControlBlank.resx">
       <DependentUpon>UserControlBlank.cs</DependentUpon>
